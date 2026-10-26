@@ -3,244 +3,352 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#171927">
-<title>Nicole Hardin × Omnia Session Strings</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nicole Hardin and Omnia Session Strings — arranging, orchestration, composition, conducting, and musician contracting.">
+<title>Nicole Hardin | Omnia Session Strings</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;600;800&display=swap');
-:root{--ink:#171927;--violet:#5945ae;--coral:#f1b0a2;--lime:#d9ef94;--cream:#f8f5ef;--blue:#164c64}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65}
-a{color:inherit}
-.wrap{max-width:1150px;margin:auto;padding:0 6%}
-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0}
-.logo{font-family:Manrope,sans-serif;font-weight:800;line-height:1.25;text-decoration:none}
-.logo span{color:var(--violet)}
-nav{display:flex;gap:17px;flex-wrap:wrap;font-size:13px;font-weight:700}
-nav a{text-decoration:none}
-h1,h2,h3{font-family:Manrope,sans-serif;letter-spacing:-.06em;line-height:1.1}
-h1{font-size:clamp(55px,10vw,118px);margin:24px 0}
-h2{font-size:clamp(34px,5.8vw,62px);margin:16px 0 25px}
-h3{font-size:clamp(25px,3vw,35px)}
-.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:700}
-.hero{background:var(--ink);color:white;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:370px;height:370px;border:75px solid var(--violet);border-radius:50%;right:-120px;top:-120px}
-.hero:after{content:"";position:absolute;width:260px;height:260px;border:48px solid var(--coral);border-radius:50%;right:16%;bottom:-210px}
-.hero-inner{position:relative;padding:105px 0;min-height:540px}
-.hero h1 em{font-style:normal;color:var(--lime)}
-.hero p{font-size:19px;max-width:620px}
-.button{display:inline-block;background:var(--lime);color:var(--ink);padding:14px 25px;border-radius:40px;text-decoration:none;font-weight:800;margin-top:20px}
-.section{padding:80px 0}
-.lead{font-size:19px;max-width:800px}
-.duo,.contact-grid,.credit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.panel{padding:38px;border-radius:12px;min-height:380px;display:flex;flex-direction:column;justify-content:space-between}
-.panel h3{font-size:clamp(38px,5vw,60px);margin:15px 0}
-.panel p{font-size:17px}
-.panel a{font-weight:800}
-.nicole{background:var(--coral)}
-.omnia{background:var(--violet);color:white}
-.dark{background:var(--blue);color:white}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}
-.service{border:1px solid #ffffff66;padding:24px;min-height:150px}
-.service strong{font-size:19px}
-.service p{font-size:14px;color:#d6e5eb}
-.credit-box{border-top:4px solid var(--violet);padding:24px 0}
-.credit-box h3{margin:10px 0}
-.chips{display:flex;flex-wrap:wrap;gap:9px}
-.chips span{border:1px solid #a9a49e;border-radius:40px;padding:8px 14px;font-size:14px;font-weight:700}
-.subhead{margin:45px 0 18px}
-.subhead span{background:var(--lime);padding:6px 12px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.recognition{background:#e8e3fa;border-radius:14px;padding:32px;margin-top:25px}
-.recognition strong{color:var(--violet)}
-.contact{background:var(--lime);padding:80px 0}
-.contact a{font-weight:700;overflow-wrap:anywhere}
-.social{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px}
-footer{padding:28px 0;font-size:13px}
-@media(max-width:750px){
-header{flex-direction:column;align-items:flex-start}
-.duo,.contact-grid,.credit-grid{grid-template-columns:1fr}
-.services{grid-template-columns:1fr}
-.hero-inner{padding:75px 0;min-height:450px}
-.section,.contact{padding-top:55px;padding-bottom:55px}
-.panel{min-height:320px;padding:30px}
+:root {
+  --bg:#242424;
+  --surface:#303030;
+  --ink:#f2eee7;
+  --muted:#c2bdb6;
+  --accent:#d1b38d;
+  --line:#55504a;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+a {color:inherit}
+.wrap {max-width:1120px;margin:auto;padding:0 24px}
+header {
+  border-bottom:1px solid var(--line);
+  padding:22px 0;
+}
+nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:18px;
+}
+.brand {
+  font-size:13px;
+  letter-spacing:2px;
+  color:var(--accent);
+  font-weight:bold;
+  text-decoration:none;
+}
+.navlinks {display:flex;gap:20px;flex-wrap:wrap}
+.navlinks a {
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  text-decoration:none;
+}
+.navlinks a:hover,.link:hover {color:var(--accent)}
+.hero {padding:120px 0 105px}
+.eyebrow {
+  color:var(--accent);
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+h1,h2,h3 {
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:normal;
+  line-height:1.15;
+}
+h1 {
+  font-size:clamp(48px,8vw,100px);
+  max-width:950px;
+  margin:22px 0;
+  letter-spacing:-2px;
+}
+h2 {
+  font-size:clamp(34px,5vw,58px);
+  margin:12px 0 26px;
+}
+h3 {font-size:29px;margin:0 0 15px}
+.lead {
+  max-width:660px;
+  font-size:19px;
+  color:var(--muted);
+}
+section {padding:85px 0;border-top:1px solid var(--line)}
+.two {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+.panel {
+  padding:42px;
+  background:var(--surface);
+  border:1px solid var(--line);
+}
+.panel p,.muted {color:var(--muted)}
+.tag {
+  display:inline-block;
+  padding:6px 11px;
+  margin:5px 5px 5px 0;
+  border:1px solid var(--line);
+  font-size:12px;
+  color:var(--ink);
+}
+.service-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+.service {
+  border-top:1px solid var(--accent);
+  padding-top:18px;
+}
+.service h3 {font-size:24px}
+.service p {color:var(--muted)}
+.credit-block {margin:35px 0}
+.credit-block h3 {font-size:23px;color:var(--accent)}
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:30px;
+}
+.gallery a {
+  min-height:175px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:23px;
+  text-decoration:none;
+  transition:transform .2s,border-color .2s;
+}
+.gallery a:hover {
+  transform:translateY(-4px);
+  border-color:var(--accent);
+}
+.gallery small {
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.gallery strong {
+  font-family:Georgia,serif;
+  font-size:23px;
+  font-weight:normal;
+}
+.gallery span {font-size:12px;color:var(--muted)}
+.contact a {color:var(--accent);overflow-wrap:anywhere}
+footer {
+  padding:35px 0;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:12px;
+}
+@media(max-width:760px) {
+  .hero {padding:85px 0}
+  section {padding:65px 0}
+  .two,.service-grid {grid-template-columns:1fr}
+  .gallery {grid-template-columns:repeat(2,1fr)}
+  .panel {padding:28px}
+}
+@media(max-width:480px) {
+  .gallery {grid-template-columns:1fr}
+  .navlinks {gap:12px}
+  h1 {letter-spacing:-1px}
 }
 </style>
 </head>
 <body>
-<header class="wrap">
-<a class="logo" href="#home">NICOLE HARDIN <span>×</span><br>OMNIA SESSION STRINGS</a>
+
+<header>
+<div class="wrap">
 <nav>
+<a class="brand" href="#top">NICOLE HARDIN / OMNIA SESSION STRINGS</a>
+<div class="navlinks">
 <a href="#about">About</a>
-<a href="#brands">Our Work</a>
 <a href="#services">Services</a>
 <a href="#credits">Credits</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
+</div>
 </nav>
+</div>
 </header>
-<main>
-<section class="hero" id="home">
-<div class="wrap hero-inner">
-<div class="eyebrow">Music without boundaries · Artistry with intention</div>
-<h1>Sound is<br><em>our canvas.</em></h1>
-<p>Two creative identities. One shared commitment to powerful musical storytelling—from the first written note to the final performance.</p>
-<a class="button" href="#brands">Explore Our Work</a>
-</div>
-</section>
 
-<section class="section wrap" id="about">
-<div class="eyebrow">Our vision</div>
-<h2>Where imagination meets orchestral possibility.</h2>
-<p class="lead">Nicole Hardin and Omnia Session Strings bring composition, arranging, orchestration, performance and production together through a shared commitment to musical excellence and collaboration.</p>
-</section>
+<main id="top">
+<div class="wrap hero">
+<div class="eyebrow">Music · Artistry · Collaboration</div>
+<h1>The art of bringing music to life.</h1>
+<p class="lead">Creative vision and exceptional musicianship, from the recording studio to the concert stage.</p>
+<p class="eyebrow">Nicole Hardin × Omnia Session Strings</p>
+</div>
 
-<section class="section wrap" id="brands">
-<div class="eyebrow">Two names · Equal vision</div>
-<div class="duo">
-<article class="panel nicole">
-<div>
-<div class="eyebrow">The Creative</div>
-<h3>Nicole<br>Hardin.</h3>
-<p>Composer, arranger, orchestrator and conductor working across recording, live performance and symphonic settings.</p>
-</div>
-<a href="mailto:stringschickmusic@gmail.com">Collaborate with Nicole →</a>
-</article>
-<article class="panel omnia">
-<div>
-<div class="eyebrow">The Collective</div>
-<h3>Omnia<br>Session<br>Strings.</h3>
-<p>Co-founded by Nicole and Hamilton Hardin, Omnia supports artists and producers through string arrangements, orchestral recording and professional musician contracting.</p>
-</div>
-<a href="mailto:omniasessions@gmail.com">Work with Omnia →</a>
-</article>
-</div>
-</section>
-
-<section class="section dark" id="services">
+<section id="about">
 <div class="wrap">
-<div class="eyebrow">What we create</div>
-<h2>From the intimate to the extraordinary.</h2>
-<div class="services">
-<div class="service"><strong>Composition</strong><p>Original music for performance and production.</p></div>
-<div class="service"><strong>Arranging</strong><p>Creative arrangements for artists and ensembles.</p></div>
-<div class="service"><strong>Orchestration</strong><p>Expressive writing for strings and full orchestra.</p></div>
-<div class="service"><strong>Session Strings</strong><p>Professional strings for recordings and live projects.</p></div>
-<div class="service"><strong>Musician Contracting</strong><p>Assembling the right players for each project.</p></div>
-<div class="service"><strong>Conducting &amp; Music Direction</strong><p>Musical leadership from rehearsal to performance.</p></div>
+<div class="eyebrow">Who we are</div>
+<h2>Two identities. One commitment to excellence.</h2>
+<div class="two">
+<article class="panel">
+<div class="eyebrow">The Artist</div>
+<h3>Nicole Hardin</h3>
+<p>Composer, arranger, orchestrator, conductor, and musician contractor working across contemporary music, orchestral performance, television, and live productions.</p>
+<p>Nicole brings a deep understanding of instrumental writing, collaborative artistry, and the people who bring music from score to stage.</p>
+<p>Nicole served as an elected Governor of the Recording Academy Nashville Chapter from 2023–2025.</p>
+</article>
+<article class="panel">
+<div class="eyebrow">The Company</div>
+<h3>Omnia Session Strings</h3>
+<p>Founded by Nicole and Hamilton Hardin, Omnia Session Strings provides orchestral and string services for recording artists, producers, and live productions.</p>
+<p>From assembling exceptional musicians to coordinating sessions and delivering compelling performances, Omnia brings artistry and organization together.</p>
+<p>Services include string and orchestral recording, personnel contracting, ensemble coordination, and creative production support.</p>
+</article>
 </div>
 </div>
 </section>
 
-<section class="section wrap" id="credits">
-<div class="eyebrow">Selected credits</div>
-<h2>Distinct work. Shared artistry.</h2>
-<p class="lead">Selected professional credits organized by Nicole's individual work and projects associated with Omnia Session Strings.</p>
-<div class="credit-grid">
-<div class="credit-box">
-<div class="eyebrow">Nicole Hardin</div>
-<h3>Collaborations</h3>
-<div class="chips">
-<span>John Legend</span>
-<span>Victoria Monét</span>
-<span>Becky G</span>
-<span>TWICE</span>
-<span>D Smoke</span>
-<span>Sheila E.</span>
-<span>CeCe Winans</span>
-<span>Tank</span>
-<span>Flavour</span>
-<span>Fantasia</span>
-<span>J. Ivy</span>
-<span>Daniel Caesar</span>
-<span>Tyla</span>
-<span>H.E.R.</span>
-<span>Lauryn Hill &amp; The Fugees</span>
-<span>T.I.</span>
+<section id="services">
+<div class="wrap">
+<div class="eyebrow">What we do</div>
+<h2>From imagination to performance.</h2>
+<div class="service-grid">
+<div class="service">
+<h3>Arranging & Orchestration</h3>
+<p>Original arrangements, orchestral writing, and instrumentation for recordings, concerts, television, and special events.</p>
+</div>
+<div class="service">
+<h3>Musician Contracting</h3>
+<p>Orchestral and session personnel selection, ensemble assembly, scheduling, and coordination for recording and live performance.</p>
+</div>
+<div class="service">
+<h3>Composition</h3>
+<p>Original music and creative development for artists, ensembles, and commissioned projects.</p>
+</div>
+<div class="service">
+<h3>Conducting</h3>
+<p>Musical leadership for orchestral concerts, recording sessions, and staged productions.</p>
+</div>
+<div class="service">
+<h3>Session Strings</h3>
+<p>Professional string ensembles and orchestral musicians for studio sessions and live performances through Omnia Session Strings.</p>
+</div>
+<div class="service">
+<h3>Production Collaboration</h3>
+<p>Creative collaboration with artists, producers, music directors, and production teams to realize their musical vision.</p>
 </div>
 </div>
-<div class="credit-box">
-<div class="eyebrow">Omnia Session Strings</div>
-<h3>Projects &amp; Clients</h3>
-<div class="chips">
-<span>Tyla</span>
-<span>Fantasia</span>
-<span>Mariah Carey</span>
-<span>Coco Jones</span>
-<span>Take 6</span>
-<span>The War &amp; Treaty</span>
-<span>J. Ivy</span>
-<span>Daniel Caesar</span>
-</div>
-</div>
-</div>
-
-<div class="subhead"><span>Nicole Hardin · Live performance</span></div>
-<h3>Performed With</h3>
-<div class="chips">
-<span>Mary J. Blige</span>
-<span>Rihanna</span>
-<span>Beyoncé</span>
-<span>Kenny Rogers (CMA)</span>
-<span>P!nk</span>
-<span>Kacey Musgraves</span>
-<span>Dan + Shay</span>
-<span>Lizzo</span>
-<span>Jay-Z</span>
-<span>Natalie Grant</span>
-</div>
-
-<div class="subhead"><span>Nicole Hardin · Specialized work</span></div>
-<div class="credit-grid">
-<div class="credit-box">
-<h3>Arranged &amp; Performed</h3>
-<div class="chips"><span>Naomi Raine</span></div>
-</div>
-<div class="credit-box">
-<h3>Orchestration</h3>
-<div class="chips"><span>Bassic Black Entertainment</span></div>
-</div>
-</div>
-
-<div class="subhead"><span>Nicole Hardin · Orchestral &amp; operatic work</span></div>
-<div class="chips">
-<span>Atlanta Symphony Orchestra</span>
-<span>Nashville Symphony</span>
-<span>Atlanta Opera</span>
 </div>
 </section>
 
-<section class="section wrap" id="leadership">
-<div class="eyebrow">Nicole Hardin · Biography</div>
-<h2>Leadership &amp; Recognition.</h2>
-<div class="recognition">
-<strong>Recording Academy · Nashville Chapter Governor, 2023–2025</strong>
-<p>In 2023, Nicole was elected Governor of the Recording Academy's Nashville Chapter. Her service reflects an ongoing commitment to supporting music professionals, creative communities and the broader music industry.</p>
+<section id="credits">
+<div class="wrap">
+<div class="eyebrow">Selected experience</div>
+<h2>Work & collaborations.</h2>
+
+<div class="two">
+<div>
+<div class="credit-block">
+<h3>Nicole Hardin · Artist Collaborations</h3>
+<p>John Legend · Victoria Monét · Becky G · TWICE · D Smoke · Sheila E. · CeCe Winans · Tank · Flavour · Fantasia · J. Ivy · Daniel Caesar · Tyla · H.E.R. · Lauryn Hill & The Fugees · T.I. · Naomi Raine</p>
+</div>
+<div class="credit-block">
+<h3>Television & Awards</h3>
+<p>The GRAMMY Awards · American Music Awards · American Idol · The Tonight Show Starring Jimmy Fallon · Jimmy Kimmel Live! · The Late Show with Stephen Colbert</p>
+<p class="muted">Selected arranging and orchestration credits.</p>
+</div>
+<div class="credit-block">
+<h3>Orchestral & Operatic</h3>
+<p>Atlanta Symphony Orchestra · Nashville Symphony · Atlanta Opera</p>
+</div>
+<div class="credit-block">
+<h3>Additional Orchestration</h3>
+<p>Mariah Carey · Bassic Black Entertainment</p>
+</div>
+</div>
+
+<div>
+<div class="credit-block">
+<h3>Omnia Session Strings · Selected Projects</h3>
+<p>Tyla · Fantasia · Mariah Carey · Coco Jones · Take 6 · The War & Treaty · J. Ivy · Daniel Caesar</p>
+</div>
+<div class="credit-block">
+<h3>Nicole Hardin · Live Performance</h3>
+<p>Mary J. Blige · Rihanna · Beyoncé · Kenny Rogers (CMA) · P!nk · Kacey Musgraves · Dan + Shay · Lizzo · Jay-Z · Natalie Grant</p>
+</div>
+<div class="credit-block">
+<h3>Creative Leadership</h3>
+<p>Recording Academy Nashville Chapter Governor, 2023–2025.</p>
+</div>
+</div>
+</div>
 </div>
 </section>
 
-<section class="contact" id="contact">
+<section id="gallery">
+<div class="wrap">
+<div class="eyebrow">Selected media</div>
+<h2>Watch & Listen.</h2>
+<p class="muted">A collection of performances, recordings, and creative moments. Select a tile to open the original post.</p>
+
+<div class="gallery">
+<a href="https://www.instagram.com/p/DHO5Qihuu2l/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 01</strong><span>View post ↗</span></a>
+<a href="https://www.instagram.com/reel/DURB1TZAR7c/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 02</strong><span>Watch reel ↗</span></a>
+<a href="https://www.instagram.com/reel/De8SK8uClAs/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 03</strong><span>Watch reel ↗</span></a>
+<a href="https://www.instagram.com/reel/CiSkwbrogNa/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 04</strong><span>Watch reel ↗</span></a>
+<a href="https://www.instagram.com/tv/CboMEU9I85J/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 05</strong><span>Watch video ↗</span></a>
+<a href="https://www.instagram.com/tv/CdCa7_DoPsN/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 06</strong><span>Watch video ↗</span></a>
+
+<a href="https://www.facebook.com/share/r/1NS2HVTEhx/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 07</strong><span>Watch reel ↗</span></a>
+<a href="https://www.facebook.com/share/v/1FnktcXPxr/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 08</strong><span>Watch video ↗</span></a>
+<a href="https://www.facebook.com/share/v/19oXeUYtwG/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 09</strong><span>Watch video ↗</span></a>
+<a href="https://www.facebook.com/share/v/1DSutTJDTM/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 10</strong><span>Watch video ↗</span></a>
+<a href="https://www.facebook.com/share/r/19DzVFBjdp/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 11</strong><span>Watch reel ↗</span></a>
+<a href="https://www.facebook.com/share/v/1CFseBzRus/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 12</strong><span>Watch video ↗</span></a>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
 <div class="wrap">
 <div class="eyebrow">Let's collaborate</div>
-<h2>Every great sound starts with a conversation.</h2>
-<div class="contact-grid">
+<h2>Let's make something extraordinary.</h2>
+<div class="two">
 <div>
 <h3>Nicole Hardin</h3>
-<p>Composition · Arranging · Orchestration · Conducting</p>
-<a href="mailto:stringschickmusic@gmail.com">stringschickmusic@gmail.com</a>
+<p>Arranging, orchestration, composition, conducting, and contracting inquiries.</p>
+<p><a href="mailto:stringschickmusic@gmail.com">stringschickmusic@gmail.com</a></p>
 </div>
 <div>
 <h3>Omnia Session Strings</h3>
-<p>Recording · String Arrangements · Contracting</p>
-<a href="mailto:omniasessions@gmail.com">omniasessions@gmail.com</a>
+<p>String recording, orchestral sessions, ensemble booking, and personnel contracting.</p>
+<p><a href="mailto:omniasessions@gmail.com">omniasessions@gmail.com</a></p>
 </div>
 </div>
-<div class="social">
-<a href="https://www.instagram.com/stringschick/" target="_blank" rel="noopener noreferrer">Instagram →</a>
-<a href="https://www.facebook.com/share/1dvphjsjcH/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook →</a>
-</div>
+<p>
+<a class="link" href="https://www.instagram.com/stringschick/" target="_blank" rel="noopener noreferrer">Instagram</a>
+&nbsp; · &nbsp;
+<a class="link" href="https://www.facebook.com/share/1dvphjsjcH/" target="_blank" rel="noopener noreferrer">Facebook</a>
+</p>
 </div>
 </section>
 </main>
-<footer class="wrap">© 2026 Nicole Hardin × Omnia Session Strings · Independent artistry. Collective impact.</footer>
+
+<footer>
+<div class="wrap">
+© <span id="year"></span> Nicole Hardin × Omnia Session Strings. All rights reserved.
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
