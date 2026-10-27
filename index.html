@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +44,7 @@ a {
   color:inherit;
 }
 
-/* UPDATED LEFT AND RIGHT MARGINS */
-
+/* MAIN CONTENT CONTAINER */
 .wrap {
   width:100%;
   max-width:1000px;
@@ -56,8 +54,7 @@ a {
   padding-right:clamp(28px,5vw,64px);
 }
 
-/* PREVENT CONTENT FROM OVERFLOWING */
-
+/* PREVENT HORIZONTAL OVERFLOW */
 .wrap,
 .panel,
 .service,
@@ -77,7 +74,6 @@ p,
 }
 
 /* HEADER */
-
 header {
   border-bottom:1px solid var(--line);
   padding:22px 0;
@@ -118,7 +114,6 @@ nav {
 }
 
 /* HERO */
-
 .hero {
   padding:120px 0 105px;
 }
@@ -163,14 +158,12 @@ h3 {
 }
 
 /* SECTIONS */
-
 section {
   padding:85px 0;
   border-top:1px solid var(--line);
 }
 
-/* TWO COLUMN LAYOUT */
-
+/* TWO-COLUMN LAYOUT */
 .two {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -198,7 +191,6 @@ section {
 }
 
 /* SERVICES */
-
 .service-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -219,7 +211,6 @@ section {
 }
 
 /* CREDITS */
-
 .credit-block {
   margin:35px 0;
 }
@@ -230,7 +221,6 @@ section {
 }
 
 /* GALLERY */
-
 .gallery {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -273,14 +263,12 @@ section {
 }
 
 /* CONTACT */
-
 .contact a {
   color:var(--accent);
   overflow-wrap:anywhere;
 }
 
 /* FOOTER */
-
 footer {
   padding:35px 0;
   border-top:1px solid var(--line);
@@ -288,9 +276,15 @@ footer {
   font-size:12px;
 }
 
-/* TABLET RESPONSIVENESS */
+/* UPDATED IPAD AND TABLET LAYOUT */
+@media (min-width:481px) and (max-width:1199px) {
 
-@media (max-width:760px) {
+  .wrap {
+    width:100%;
+    max-width:100%;
+    padding-left:30px;
+    padding-right:30px;
+  }
 
   .hero {
     padding:85px 0;
@@ -312,17 +306,28 @@ footer {
   .panel {
     padding:28px;
   }
+
 }
 
-/* PHONE RESPONSIVENESS */
-
+/* PHONE LAYOUT */
 @media (max-width:480px) {
 
   .wrap {
+    width:100%;
     padding-left:30px;
     padding-right:30px;
   }
 
+  .hero {
+    padding:85px 0;
+  }
+
+  section {
+    padding:65px 0;
+  }
+
+  .two,
+  .service-grid,
   .gallery {
     grid-template-columns:minmax(0,1fr);
   }
@@ -343,6 +348,7 @@ footer {
   .panel {
     padding:24px;
   }
+
 }
 </style>
 </head>
@@ -554,215 +560,4 @@ Jimmy Kimmel Live! · The Late Show with Stephen Colbert
 <p class="muted">
 Selected arranging and orchestration credits.
 </p>
-</div>
-
-<div class="credit-block">
-<h3>Orchestral & Operatic</h3>
-<p>
-Atlanta Symphony Orchestra · Nashville Symphony ·
-Atlanta Opera
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Additional Orchestration</h3>
-<p>Mariah Carey · Bassic Black Entertainment</p>
-</div>
-
-</div>
-
-<div>
-
-<div class="credit-block">
-<h3>Omnia Session Strings · Selected Projects</h3>
-<p>
-Tyla · Fantasia · Mariah Carey · Coco Jones ·
-Take 6 · The War & Treaty · J. Ivy · Daniel Caesar
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Nicole Hardin · Live Performance</h3>
-<p>
-Mary J. Blige · Rihanna · Beyoncé · Kenny Rogers (CMA) ·
-P!nk · Kacey Musgraves · Dan + Shay · Lizzo ·
-Jay-Z · Natalie Grant
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Creative Leadership</h3>
-<p>
-Recording Academy Nashville Chapter Governor,
-2023–2025.
-</p>
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="gallery">
-<div class="wrap">
-
-<div class="eyebrow">Selected media</div>
-
-<h2>Watch & Listen.</h2>
-
-<p class="muted">
-A collection of performances, recordings,
-and creative moments. Select a tile to open
-the original post.
-</p>
-
-<div class="gallery">
-
-<a href="https://www.instagram.com/p/DHO5Qihuu2l/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 01</strong>
-<span>View post ↗</span>
-</a>
-
-<a href="https://www.instagram.com/reel/DURB1TZAR7c/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 02</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.instagram.com/reel/De8SK8uClAs/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 03</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.instagram.com/reel/CiSkwbrogNa/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 04</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.instagram.com/tv/CboMEU9I85J/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 05</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.instagram.com/tv/CdCa7_DoPsN/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 06</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/r/1NS2HVTEhx/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 07</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/1FnktcXPxr/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 08</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/19oXeUYtwG/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 09</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/1DSutTJDTM/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 10</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/r/19DzVFBjdp/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 11</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/1CFseBzRus/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 12</strong>
-<span>Watch video ↗</span>
-</a>
-
-</div>
-</div>
-</section>
-
-<section id="contact" class="contact">
-<div class="wrap">
-
-<div class="eyebrow">Let's collaborate</div>
-
-<h2>Let's make something extraordinary.</h2>
-
-<div class="two">
-
-<div>
-<h3>Nicole Hardin</h3>
-<p>
-Arranging, orchestration, composition,
-conducting, and contracting inquiries.
-</p>
-<p>
-<a href="mailto:stringschickmusic@gmail.com">
-stringschickmusic@gmail.com
-</a>
-</p>
-</div>
-
-<div>
-<h3>Omnia Session Strings</h3>
-<p>
-String recording, orchestral sessions,
-ensemble booking, and personnel contracting.
-</p>
-<p>
-<a href="mailto:omniasessions@gmail.com">
-omniasessions@gmail.com
-</a>
-</p>
-</div>
-
-</div>
-
-<p>
-<a class="link"
-href="https://www.instagram.com/stringschick/"
-target="_blank"
-rel="noopener noreferrer">Instagram</a>
-
-&nbsp; · &nbsp;
-
-<a class="link"
-href="https://www.facebook.com/share/1dvphjsjcH/"
-target="_blank"
-rel="noopener noreferrer">Facebook</a>
-</p>
-
-</div>
-</section>
-
-</main>
-
-<footer>
-<div class="wrap">
-© <span id="year"></span>
-Nicole Hardin × Omnia Session Strings.
-All rights reserved.
-</div>
-</footer>
-
-<script>
-document.getElementById("year").textContent =
-new Date().getFullYear();
-</script>
-
-</body>
-</html>
+</
