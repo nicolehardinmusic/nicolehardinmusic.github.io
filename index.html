@@ -4,8 +4,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Nicole Hardin — composition, arranging, orchestration, conducting, and musician contracting.">
-<title>Nicole Hardin | Music & Orchestration</title>
+
+<title>Nicole Hardin Music</title>
+<meta name="description" content="Nicole Hardin Music | Composer • Arranger • Orchestrator • Conductor • Musician Contractor">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nicole Hardin Music">
+<meta property="og:title" content="Nicole Hardin Music">
+<meta property="og:description" content="Composer • Arranger • Orchestrator • Conductor • Musician Contractor">
+<meta property="og:url" content="https://nicolehardinmusic.github.io/">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nicole Hardin Music">
+<meta name="twitter:description" content="Composer • Arranger • Orchestrator • Conductor • Musician Contractor">
+
+<link rel="canonical" href="https://nicolehardinmusic.github.io/">
 
 <style>
 :root {
@@ -16,11 +29,8 @@
   --accent:#d1b38d;
   --line:#55504a;
 }
-
 * { box-sizing:border-box; }
-
 html { scroll-behavior:smooth; }
-
 body {
   margin:0;
   background:var(--bg);
@@ -29,9 +39,7 @@ body {
   line-height:1.7;
   overflow-x:hidden;
 }
-
 a { color:inherit; }
-
 .wrap {
   width:100%;
   max-width:1000px;
@@ -39,12 +47,10 @@ a { color:inherit; }
   padding-left:48px;
   padding-right:48px;
 }
-
 header {
   border-bottom:1px solid var(--line);
   padding:22px 0;
 }
-
 nav {
   display:flex;
   align-items:center;
@@ -52,7 +58,6 @@ nav {
   flex-wrap:wrap;
   gap:18px;
 }
-
 .brand {
   font-size:13px;
   letter-spacing:2px;
@@ -61,25 +66,24 @@ nav {
   text-decoration:none;
   overflow-wrap:anywhere;
 }
-
 .navlinks {
   display:flex;
   flex-wrap:wrap;
   gap:18px;
 }
-
 .navlinks a {
   font-size:12px;
   text-transform:uppercase;
   letter-spacing:1px;
   text-decoration:none;
 }
-
-.navlinks a:hover,
-.link:hover { color:var(--accent); }
-
-.hero { padding-top:120px; padding-bottom:105px; }
-
+.navlinks a:hover,.link:hover {
+  color:var(--accent);
+}
+.hero {
+  padding-top:120px;
+  padding-bottom:105px;
+}
 .eyebrow {
   color:var(--accent);
   font-size:11px;
@@ -87,88 +91,74 @@ nav {
   text-transform:uppercase;
   font-weight:bold;
 }
-
 h1,h2,h3 {
   font-family:Georgia,"Times New Roman",serif;
   font-weight:normal;
   line-height:1.15;
   overflow-wrap:break-word;
 }
-
 h1 {
   font-size:clamp(42px,8vw,100px);
   max-width:950px;
   margin:22px 0;
   letter-spacing:-2px;
 }
-
 h2 {
   font-size:clamp(32px,5vw,58px);
   margin:12px 0 26px;
 }
-
-h3 { font-size:29px; margin:0 0 15px; }
-
+h3 {
+  font-size:29px;
+  margin:0 0 15px;
+}
 p { overflow-wrap:break-word; }
-
 .lead {
   max-width:660px;
   font-size:19px;
   color:var(--muted);
 }
-
 section {
   padding:85px 0;
   border-top:1px solid var(--line);
 }
-
 .two {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:25px;
 }
-
 .panel {
   min-width:0;
   padding:42px;
   background:var(--surface);
   border:1px solid var(--line);
 }
-
 .panel p,.muted { color:var(--muted); }
-
 .service-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:30px;
 }
-
 .service {
   min-width:0;
   border-top:1px solid var(--accent);
   padding-top:18px;
 }
-
 .service h3 { font-size:24px; }
 .service p { color:var(--muted); }
-
 .credit-block {
   min-width:0;
   margin:35px 0;
 }
-
 .credit-block h3 {
   font-size:23px;
   color:var(--accent);
 }
-
 .gallery {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:16px;
   margin-top:30px;
 }
-
 .gallery a {
   min-width:0;
   min-height:175px;
@@ -181,49 +171,41 @@ section {
   text-decoration:none;
   transition:transform .2s,border-color .2s;
 }
-
 .gallery a:hover {
   transform:translateY(-4px);
   border-color:var(--accent);
 }
-
 .gallery small {
   color:var(--accent);
   text-transform:uppercase;
   letter-spacing:2px;
 }
-
 .gallery strong {
   font-family:Georgia,serif;
   font-size:23px;
   font-weight:normal;
   overflow-wrap:break-word;
 }
-
 .gallery span {
   font-size:12px;
   color:var(--muted);
 }
-
 .contact a {
   color:var(--accent);
   overflow-wrap:anywhere;
 }
-
 .social-links {
   margin-top:35px;
   display:flex;
   flex-wrap:wrap;
   gap:18px;
 }
-
 .social-links a {
   color:var(--accent);
   text-decoration:none;
   border-bottom:1px solid var(--line);
   padding-bottom:4px;
 }
-
 footer {
   padding:35px 0;
   border-top:1px solid var(--line);
@@ -231,24 +213,20 @@ footer {
   font-size:12px;
 }
 
-/* IPAD: NARROWER, CENTERED CONTENT */
-@media (min-width:481px) and (max-width:1199px) {
+/* TABLET / IPAD */
+@media (min-width:481px) and (max-width:1400px) {
   .wrap {
     max-width:650px;
     padding-left:30px;
     padding-right:30px;
   }
-
   .two,.service-grid {
     grid-template-columns:minmax(0,1fr);
   }
-
   .gallery {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
-
   .panel { padding:28px; }
-
   h1 { font-size:clamp(42px,7vw,68px); }
 }
 
@@ -259,20 +237,15 @@ footer {
     padding-left:30px;
     padding-right:30px;
   }
-
   .two,.service-grid,.gallery {
     grid-template-columns:minmax(0,1fr);
   }
-
   .panel { padding:24px; }
-
   h1 {
     font-size:clamp(38px,10vw,48px);
     letter-spacing:-1px;
   }
-
   h2 { font-size:clamp(30px,8vw,40px); }
-
   .navlinks { gap:12px; }
 }
 </style>
@@ -284,7 +257,6 @@ footer {
 <div class="wrap">
 <nav>
 <a class="brand" href="#top">NICOLE HARDIN / OMNIA SESSION STRINGS</a>
-
 <div class="navlinks">
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -310,8 +282,8 @@ footer {
 <div class="wrap">
 <div class="eyebrow">Who we are</div>
 <h2>Two identities. One commitment to excellence.</h2>
-
 <div class="two">
+
 <article class="panel">
 <div class="eyebrow">The Artist</div>
 <h3>Nicole Hardin</h3>
@@ -327,6 +299,7 @@ footer {
 <p>From assembling exceptional musicians to coordinating sessions and delivering compelling performances, Omnia brings artistry and organization together.</p>
 <p>Services include string and orchestral recording, personnel contracting, ensemble coordination, and creative production support.</p>
 </article>
+
 </div>
 </div>
 </section>
@@ -335,8 +308,8 @@ footer {
 <div class="wrap">
 <div class="eyebrow">What we do</div>
 <h2>From imagination to performance.</h2>
-
 <div class="service-grid">
+
 <div class="service">
 <h3>Arranging & Orchestration</h3>
 <p>Original arrangements, orchestral writing, and instrumentation for recordings, concerts, television, and special events.</p>
@@ -366,6 +339,7 @@ footer {
 <h3>Production Collaboration</h3>
 <p>Creative collaboration with artists, producers, music directors, and production teams to realize their musical vision.</p>
 </div>
+
 </div>
 </div>
 </section>
@@ -374,8 +348,8 @@ footer {
 <div class="wrap">
 <div class="eyebrow">Selected experience</div>
 <h2>Work & collaborations.</h2>
-
 <div class="two">
+
 <div>
 <div class="credit-block">
 <h3>Nicole Hardin · Artist Collaborations</h3>
@@ -415,11 +389,10 @@ footer {
 <p>Recording Academy Nashville Chapter Governor, 2023–2025.</p>
 </div>
 </div>
+
 </div>
 </div>
 </section>
-
-<!-- COMPLETE WATCH & LISTEN GALLERY -->
 
 <section id="gallery">
 <div class="wrap">
@@ -429,29 +402,77 @@ footer {
 
 <div class="gallery">
 
-<a href="https://www.instagram.com/p/DHO5Qihuu2l/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 01</strong><span>View post ↗</span></a>
+<a href="https://www.instagram.com/p/DHO5Qihuu2l/" target="_blank" rel="noopener noreferrer">
+<small>Instagram</small>
+<strong>Selected Work 01</strong>
+<span>View post ↗</span>
+</a>
 
-<a href="https://www.instagram.com/reel/DURB1TZAR7c/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 02</strong><span>Watch reel ↗</span></a>
+<a href="https://www.instagram.com/reel/DURB1TZAR7c/" target="_blank" rel="noopener noreferrer">
+<small>Instagram</small>
+<strong>Selected Work 02</strong>
+<span>Watch reel ↗</span>
+</a>
 
-<a href="https://www.instagram.com/reel/De8SK8uClAs/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 03</strong><span>Watch reel ↗</span></a>
+<a href="https://www.instagram.com/reel/De8SK8uClAs/" target="_blank" rel="noopener noreferrer">
+<small>Instagram</small>
+<strong>Selected Work 03</strong>
+<span>Watch reel ↗</span>
+</a>
 
-<a href="https://www.instagram.com/reel/CiSkwbrogNa/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 04</strong><span>Watch reel ↗</span></a>
+<a href="https://www.instagram.com/reel/CiSkwbrogNa/" target="_blank" rel="noopener noreferrer">
+<small>Instagram</small>
+<strong>Selected Work 04</strong>
+<span>Watch reel ↗</span>
+</a>
 
-<a href="https://www.instagram.com/tv/CboMEU9I85J/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 05</strong><span>Watch video ↗</span></a>
+<a href="https://www.instagram.com/tv/CboMEU9I85J/" target="_blank" rel="noopener noreferrer">
+<small>Instagram</small>
+<strong>Selected Work 05</strong>
+<span>Watch video ↗</span>
+</a>
 
-<a href="https://www.instagram.com/tv/CdCa7_DoPsN/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 06</strong><span>Watch video ↗</span></a>
+<a href="https://www.instagram.com/tv/CdCa7_DoPsN/" target="_blank" rel="noopener noreferrer">
+<small>Instagram</small>
+<strong>Selected Work 06</strong>
+<span>Watch video ↗</span>
+</a>
 
-<a href="https://www.facebook.com/share/r/1NS2HVTEhx/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 07</strong><span>Watch reel ↗</span></a>
+<a href="https://www.facebook.com/share/r/1NS2HVTEhx/" target="_blank" rel="noopener noreferrer">
+<small>Facebook</small>
+<strong>Selected Work 07</strong>
+<span>Watch reel ↗</span>
+</a>
 
-<a href="https://www.facebook.com/share/v/1FnktcXPxr/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 08</strong><span>Watch video ↗</span></a>
+<a href="https://www.facebook.com/share/v/1FnktcXPxr/" target="_blank" rel="noopener noreferrer">
+<small>Facebook</small>
+<strong>Selected Work 08</strong>
+<span>Watch video ↗</span>
+</a>
 
-<a href="https://www.facebook.com/share/v/19oXeUYtwG/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 09</strong><span>Watch video ↗</span></a>
+<a href="https://www.facebook.com/share/v/19oXeUYtwG/" target="_blank" rel="noopener noreferrer">
+<small>Facebook</small>
+<strong>Selected Work 09</strong>
+<span>Watch video ↗</span>
+</a>
 
-<a href="https://www.facebook.com/share/v/1DSutTJDTM/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 10</strong><span>Watch video ↗</span></a>
+<a href="https://www.facebook.com/share/v/1DSutTJDTM/" target="_blank" rel="noopener noreferrer">
+<small>Facebook</small>
+<strong>Selected Work 10</strong>
+<span>Watch video ↗</span>
+</a>
 
-<a href="https://www.facebook.com/share/r/19DzVFBjdp/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 11</strong><span>Watch reel ↗</span></a>
+<a href="https://www.facebook.com/share/r/19DzVFBjdp/" target="_blank" rel="noopener noreferrer">
+<small>Facebook</small>
+<strong>Selected Work 11</strong>
+<span>Watch reel ↗</span>
+</a>
 
-<a href="https://www.facebook.com/share/v/1CFseBzRus/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 12</strong><span>Watch video ↗</span></a>
+<a href="https://www.facebook.com/share/v/1CFseBzRus/" target="_blank" rel="noopener noreferrer">
+<small>Facebook</small>
+<strong>Selected Work 12</strong>
+<span>Watch video ↗</span>
+</a>
 
 </div>
 </div>
