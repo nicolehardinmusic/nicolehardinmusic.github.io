@@ -12,28 +12,46 @@
 <meta property="og:description" content="Music. Artistry. Collaboration.">
 <meta property="og:url" content="https://nicolehardinmusic.github.io/">
 <link rel="canonical" href="https://nicolehardinmusic.github.io/">
+
 <style>
 :root {
-  --bg:#242424;
-  --surface:#303030;
-  --ink:#f2eee7;
-  --muted:#c2bdb6;
-  --accent:#d1b38d;
-  --line:#55504a;
+  --bg:#101b2b;
+  --surface:#1b2b40;
+  --ink:#f5f0e9;
+  --muted:#c6cbd3;
+  --accent:#e0bc8b;
+  --line:#45566a;
 }
+
 * { box-sizing:border-box; }
+
 html { scroll-behavior:smooth; }
+
 body {
   margin:0;
-  background:var(--bg);
+  background:
+    radial-gradient(ellipse at 88% 8%,#203c5b 0%,transparent 32%),
+    linear-gradient(130deg,#0c1725,#15273c 55%,#0e1b2b);
+  background-attachment:fixed;
   color:var(--ink);
   font-family:Arial,Helvetica,sans-serif;
   line-height:1.7;
   overflow-x:hidden;
 }
+
 a { color:inherit; }
-.wrap { width:min(1140px,calc(100% - 48px)); margin:auto; }
-header { border-bottom:1px solid var(--line); padding:20px 0; }
+
+.wrap {
+  width:min(1140px,calc(100% - 48px));
+  margin:auto;
+}
+
+header {
+  border-bottom:1px solid var(--line);
+  padding:20px 0;
+  background:rgba(8,18,32,.65);
+}
+
 nav {
   display:flex;
   align-items:center;
@@ -41,6 +59,7 @@ nav {
   gap:22px;
   flex-wrap:wrap;
 }
+
 .brand {
   color:var(--accent);
   font-size:20px;
@@ -48,27 +67,48 @@ nav {
   font-weight:700;
   text-decoration:none;
 }
-.navlinks { display:flex; flex-wrap:wrap; gap:16px; }
+
+.navlinks {
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
 .navlinks a {
   font-size:11px;
   text-decoration:none;
   text-transform:uppercase;
   letter-spacing:1px;
 }
-.navlinks a:hover,.social a:hover { color:var(--accent); }
+
+.navlinks a:hover,
+.social a:hover {
+  color:var(--accent);
+}
+
 h1,h2,h3 {
   font-family:Georgia,'Times New Roman',serif;
   font-weight:normal;
   line-height:1.12;
 }
+
 h1 {
   font-size:clamp(60px,9vw,130px);
   line-height:.98;
   letter-spacing:-3px;
   margin:16px 0 25px;
 }
-h2 { font-size:clamp(34px,5vw,60px); margin:12px 0 26px; }
-h3 { font-size:26px; margin:0 0 12px; }
+
+h2 {
+  font-size:clamp(34px,5vw,60px);
+  margin:12px 0 26px;
+}
+
+h3 {
+  font-size:26px;
+  margin:0 0 12px;
+}
+
 .eyebrow {
   color:var(--accent);
   font-size:11px;
@@ -76,6 +116,7 @@ h3 { font-size:26px; margin:0 0 12px; }
   text-transform:uppercase;
   font-weight:bold;
 }
+
 .hero {
   display:grid;
   grid-template-columns:1.1fr .9fr;
@@ -83,103 +124,199 @@ h3 { font-size:26px; margin:0 0 12px; }
   align-items:center;
   padding:80px 0 90px;
 }
-.hero p { color:var(--muted); font-size:18px; max-width:590px; }
-.hero .roles { font-size:14px; color:var(--accent); line-height:2; }
+
+.hero p {
+  color:var(--muted);
+  font-size:18px;
+  max-width:590px;
+}
+
+.hero .roles {
+  font-size:14px;
+  color:var(--accent);
+  line-height:2;
+}
+
 .hero img {
   width:100%;
   height:620px;
   object-fit:cover;
   object-position:center top;
+  border:1px solid var(--line);
+  box-shadow:0 24px 65px rgba(0,0,0,.3);
 }
+
 .tagline {
   font-family:Georgia,serif;
   font-size:26px!important;
   font-style:italic;
   color:var(--ink)!important;
 }
-section { padding:85px 0; border-top:1px solid var(--line); }
-.two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:34px; }
-.panel { padding:36px; background:var(--surface); border:1px solid var(--line); }
-.panel p,.muted { color:var(--muted); }
-.about-img { width:100%; height:100%; max-height:650px; object-fit:cover; }
+
+section {
+  padding:85px 0;
+  border-top:1px solid var(--line);
+}
+
+section:nth-of-type(even) {
+  background:rgba(4,13,25,.22);
+}
+
+.two {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:34px;
+}
+
+.panel {
+  padding:36px;
+  background:rgba(27,43,64,.88);
+  border:1px solid var(--line);
+}
+
+.panel p,.muted {
+  color:var(--muted);
+}
+
+.about-img {
+  width:100%;
+  height:100%;
+  max-height:650px;
+  object-fit:cover;
+}
+
 .service-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:30px;
 }
-.service { border-top:1px solid var(--accent); padding-top:18px; }
+
+.service {
+  border-top:1px solid var(--accent);
+  padding-top:18px;
+}
+
 .service h3 { font-size:23px; }
 .service p { color:var(--muted); }
+
 .credit-block { margin:28px 0; }
-.credit-block h3 { font-size:23px; color:var(--accent); }
+
+.credit-block h3 {
+  font-size:23px;
+  color:var(--accent);
+}
+
 .photo-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:14px;
 }
+
 .photo-grid figure { margin:0; }
-.photo-grid img { width:100%; height:340px; object-fit:cover; }
+
+.photo-grid img {
+  width:100%;
+  height:340px;
+  object-fit:cover;
+}
+
 .photo-grid figcaption {
   font-size:12px;
   color:var(--muted);
   padding:7px 0;
 }
+
 .performance-grid {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:16px;
 }
+
 .performance-grid img {
   width:100%;
   height:auto;
   aspect-ratio:4/3;
   object-fit:cover;
 }
+
 .gallery {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:16px;
   margin-top:28px;
 }
+
 .gallery a {
   min-height:150px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  background:var(--surface);
+  background:rgba(27,43,64,.88);
   border:1px solid var(--line);
   padding:22px;
   text-decoration:none;
 }
-.gallery a:hover { border-color:var(--accent); }
+
+.gallery a:hover {
+  border-color:var(--accent);
+}
+
 .gallery small {
   color:var(--accent);
   letter-spacing:2px;
   text-transform:uppercase;
 }
+
 .gallery strong {
   font-family:Georgia,serif;
   font-size:21px;
   font-weight:normal;
 }
-.gallery span { font-size:12px; color:var(--muted); }
+
+.gallery span {
+  font-size:12px;
+  color:var(--muted);
+}
+
 .contact a,.social a { color:var(--accent); }
-.social { display:flex; gap:18px; flex-wrap:wrap; margin-top:28px; }
-.social a { text-decoration:none; border-bottom:1px solid var(--line); }
+
+.social {
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.social a {
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+}
+
 footer {
   padding:35px 0;
   border-top:1px solid var(--line);
   color:var(--muted);
   font-size:12px;
 }
+
 @media(max-width:800px) {
-  .hero,.two { grid-template-columns:1fr; }
+  .hero,.two {
+    grid-template-columns:1fr;
+  }
+
   .hero { padding:55px 0; }
-  .hero img { height:auto; max-height:620px; object-fit:contain; }
+
+  .hero img {
+    height:auto;
+    max-height:620px;
+    object-fit:contain;
+  }
+
   .service-grid,.photo-grid,.gallery {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
+
 @media(max-width:520px) {
   .wrap { width:calc(100% - 34px); }
   .brand { font-size:18px; }
@@ -187,16 +324,29 @@ footer {
   .navlinks a { font-size:10px; }
   h1 { font-size:clamp(52px,15vw,75px); }
   section { padding:60px 0; }
-  .service-grid,.gallery,.photo-grid { grid-template-columns:1fr; }
-  .performance-grid { grid-template-columns:1fr; }
-  .photo-grid img { height:auto; max-height:520px; }
+
+  .service-grid,.gallery,.photo-grid {
+    grid-template-columns:1fr;
+  }
+
+  .performance-grid {
+    grid-template-columns:1fr;
+  }
+
+  .photo-grid img {
+    height:auto;
+    max-height:520px;
+  }
+
   .panel { padding:24px; }
 }
+
 @media(prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -271,36 +421,15 @@ footer {
     <h2>Work &amp; collaborations.</h2>
     <div class="two">
       <div>
-        <div class="credit-block">
-          <h3>Artist Collaborations</h3>
-          <p>Earth, Wind &amp; Fire · John Legend · Victoria Monét · Becky G · TWICE · D Smoke · Sheila E. · CeCe Winans · Tank · Flavour · Fantasia · J. Ivy · Daniel Caesar · Tyla · H.E.R. · Lauryn Hill &amp; The Fugees · T.I. · Naomi Raine</p>
-        </div>
-        <div class="credit-block">
-          <h3>Television &amp; Awards</h3>
-          <p>The GRAMMY Awards · American Music Awards · American Idol · The Tonight Show Starring Jimmy Fallon · Jimmy Kimmel Live! · The Late Show with Stephen Colbert</p>
-        </div>
-        <div class="credit-block">
-          <h3>Orchestral &amp; Operatic</h3>
-          <p>Atlanta Symphony Orchestra · Nashville Symphony · Atlanta Opera</p>
-        </div>
-        <div class="credit-block">
-          <h3>Additional Orchestration</h3>
-          <p>Mariah Carey · Bassic Black Entertainment</p>
-        </div>
+        <div class="credit-block"><h3>Artist Collaborations</h3><p>Earth, Wind &amp; Fire · John Legend · Victoria Monét · Becky G · TWICE · D Smoke · Sheila E. · CeCe Winans · Tank · Flavour · Fantasia · J. Ivy · Daniel Caesar · Tyla · H.E.R. · Lauryn Hill &amp; The Fugees · T.I. · Naomi Raine</p></div>
+        <div class="credit-block"><h3>Television &amp; Awards</h3><p>The GRAMMY Awards · American Music Awards · American Idol · The Tonight Show Starring Jimmy Fallon · Jimmy Kimmel Live! · The Late Show with Stephen Colbert</p></div>
+        <div class="credit-block"><h3>Orchestral &amp; Operatic</h3><p>Atlanta Symphony Orchestra · Nashville Symphony · Atlanta Opera</p></div>
+        <div class="credit-block"><h3>Additional Orchestration</h3><p>Mariah Carey · Bassic Black Entertainment</p></div>
       </div>
       <div>
-        <div class="credit-block">
-          <h3>Additional Selected Projects</h3>
-          <p>Tyla · Fantasia · Mariah Carey · Coco Jones · Take 6 · The War &amp; Treaty · J. Ivy · Daniel Caesar</p>
-        </div>
-        <div class="credit-block">
-          <h3>Live Performance</h3>
-          <p>Mary J. Blige · Rihanna · Beyoncé · Kenny Rogers (CMA) · P!nk · Kacey Musgraves · Dan + Shay · Lizzo · Jay-Z · Natalie Grant</p>
-        </div>
-        <div class="credit-block">
-          <h3>Creative Leadership</h3>
-          <p>Recording Academy Nashville Chapter Governor, 2023–2025.</p>
-        </div>
+        <div class="credit-block"><h3>Additional Selected Projects</h3><p>Tyla · Fantasia · Mariah Carey · Coco Jones · Take 6 · The War &amp; Treaty · J. Ivy · Daniel Caesar</p></div>
+        <div class="credit-block"><h3>Live Performance</h3><p>Mary J. Blige · Rihanna · Beyoncé · Kenny Rogers (CMA) · P!nk · Kacey Musgraves · Dan + Shay · Lizzo · Jay-Z · Natalie Grant</p></div>
+        <div class="credit-block"><h3>Creative Leadership</h3><p>Recording Academy Nashville Chapter Governor, 2023–2025.</p></div>
       </div>
     </div>
   </div>
@@ -323,30 +452,12 @@ footer {
     <div class="eyebrow">Artist Portraits</div>
     <h2>Behind the artistry.</h2>
     <div class="photo-grid">
-      <figure>
-        <img loading="lazy" src="nicole-portrait-violin.jpg" alt="Nicole Hardin standing with violin">
-        <figcaption>Portrait with violin</figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" src="nicole-blue-portrait.jpg" alt="Nicole Hardin portrait against blue background">
-        <figcaption>Artist portrait</figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" src="nicole-conducting.jpg" alt="Nicole Hardin with violin and bow in black-and-white portrait">
-        <figcaption>Musician and conductor</figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" src="nicole-city-portrait.jpg" alt="Nicole Hardin photographed against a city skyline">
-        <figcaption>Artist portrait</figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" src="nicole-artistic-portrait.jpg" alt="Creative double exposure portrait of Nicole Hardin">
-        <figcaption>Creative portrait</figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" src="nicole-black-white.jpg" alt="Black and white full-length portrait of Nicole Hardin with violin">
-        <figcaption>Black-and-white portrait</figcaption>
-      </figure>
+      <figure><img loading="lazy" src="nicole-portrait-violin.jpg" alt="Nicole Hardin standing with violin"><figcaption>Portrait with violin</figcaption></figure>
+      <figure><img loading="lazy" src="nicole-blue-portrait.jpg" alt="Nicole Hardin portrait against blue background"><figcaption>Artist portrait</figcaption></figure>
+      <figure><img loading="lazy" src="nicole-conducting.jpg" alt="Nicole Hardin with violin and bow in black-and-white portrait"><figcaption>Musician and conductor</figcaption></figure>
+      <figure><img loading="lazy" src="nicole-city-portrait.jpg" alt="Nicole Hardin photographed against a city skyline"><figcaption>Artist portrait</figcaption></figure>
+      <figure><img loading="lazy" src="nicole-artistic-portrait.jpg" alt="Creative double exposure portrait of Nicole Hardin"><figcaption>Creative portrait</figcaption></figure>
+      <figure><img loading="lazy" src="nicole-black-white.jpg" alt="Black and white full-length portrait of Nicole Hardin with violin"><figcaption>Black-and-white portrait</figcaption></figure>
     </div>
   </div>
 </section>
@@ -388,13 +499,16 @@ footer {
 </section>
 
 </main>
+
 <footer>
   <div class="wrap">
     © <span id="year"></span> Nicole Hardin Music. All rights reserved.
   </div>
 </footer>
+
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
