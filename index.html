@@ -1,25 +1,17 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Nicole Hardin Music</title>
-<meta name="description" content="Nicole Hardin | Producer, Session & Performing/Touring Musician, Orchestrator, Composer, Arranger, Conductor, Educator, and Consultant.">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nicole Hardin | Musician, Producer, Composer &amp; Conductor</title>
+<meta name="description" content="Nicole Hardin — producer, session and performing/touring musician, orchestrator, composer, arranger, conductor, educator and consultant.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nicole Hardin Music">
 <meta property="og:title" content="Nicole Hardin Music">
-<meta property="og:description" content="Producer • Musician • Orchestrator • Composer • Arranger • Conductor • Educator • Consultant">
+<meta property="og:description" content="Music. Artistry. Collaboration.">
 <meta property="og:url" content="https://nicolehardinmusic.github.io/">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nicole Hardin Music">
-<meta name="twitter:description" content="Producer • Musician • Orchestrator • Composer • Arranger • Conductor • Educator • Consultant">
-
 <link rel="canonical" href="https://nicolehardinmusic.github.io/">
-
 <style>
 :root {
   --bg:#242424;
@@ -40,50 +32,43 @@ body {
   overflow-x:hidden;
 }
 a { color:inherit; }
-.wrap {
-  width:100%;
-  max-width:1000px;
-  margin:0 auto;
-  padding-left:48px;
-  padding-right:48px;
-}
-header {
-  border-bottom:1px solid var(--line);
-  padding:22px 0;
-}
+.wrap { width:min(1140px,calc(100% - 48px)); margin:auto; }
+header { border-bottom:1px solid var(--line); padding:20px 0; }
 nav {
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:22px;
   flex-wrap:wrap;
-  gap:18px;
 }
 .brand {
-  font-size:13px;
-  letter-spacing:2px;
   color:var(--accent);
-  font-weight:bold;
+  font-size:20px;
+  letter-spacing:2px;
+  font-weight:700;
   text-decoration:none;
-  overflow-wrap:anywhere;
 }
-.navlinks {
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;
-}
+.navlinks { display:flex; flex-wrap:wrap; gap:16px; }
 .navlinks a {
-  font-size:12px;
+  font-size:11px;
+  text-decoration:none;
   text-transform:uppercase;
   letter-spacing:1px;
-  text-decoration:none;
 }
-.navlinks a:hover,.link:hover {
-  color:var(--accent);
+.navlinks a:hover,.social a:hover { color:var(--accent); }
+h1,h2,h3 {
+  font-family:Georgia,'Times New Roman',serif;
+  font-weight:normal;
+  line-height:1.12;
 }
-.hero {
-  padding-top:120px;
-  padding-bottom:105px;
+h1 {
+  font-size:clamp(60px,9vw,130px);
+  line-height:.98;
+  letter-spacing:-3px;
+  margin:16px 0 25px;
 }
+h2 { font-size:clamp(34px,5vw,60px); margin:12px 0 26px; }
+h3 { font-size:26px; margin:0 0 12px; }
 .eyebrow {
   color:var(--accent);
   font-size:11px;
@@ -91,609 +76,325 @@ nav {
   text-transform:uppercase;
   font-weight:bold;
 }
-h1,h2,h3 {
-  font-family:Georgia,"Times New Roman",serif;
-  font-weight:normal;
-  line-height:1.15;
-  overflow-wrap:break-word;
-}
-h1 {
-  font-size:clamp(42px,8vw,100px);
-  max-width:950px;
-  margin:22px 0;
-  letter-spacing:-2px;
-}
-h2 {
-  font-size:clamp(32px,5vw,58px);
-  margin:12px 0 26px;
-}
-h3 {
-  font-size:29px;
-  margin:0 0 15px;
-}
-p { overflow-wrap:break-word; }
-.lead {
-  max-width:660px;
-  font-size:19px;
-  color:var(--muted);
-}
-.roles {
-  max-width:850px;
-  margin-top:30px;
-  color:var(--accent);
-  font-size:14px;
-  line-height:2;
-  letter-spacing:.5px;
-}
-section {
-  padding:85px 0;
-  border-top:1px solid var(--line);
-}
-.two {
+.hero {
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:25px;
+  grid-template-columns:1.1fr .9fr;
+  gap:48px;
+  align-items:center;
+  padding:80px 0 90px;
 }
-.panel {
-  min-width:0;
-  padding:42px;
-  background:var(--surface);
-  border:1px solid var(--line);
+.hero p { color:var(--muted); font-size:18px; max-width:590px; }
+.hero .roles { font-size:14px; color:var(--accent); line-height:2; }
+.hero img {
+  width:100%;
+  height:620px;
+  object-fit:cover;
+  object-position:center top;
 }
+.tagline {
+  font-family:Georgia,serif;
+  font-size:26px!important;
+  font-style:italic;
+  color:var(--ink)!important;
+}
+section { padding:85px 0; border-top:1px solid var(--line); }
+.two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:34px; }
+.panel { padding:36px; background:var(--surface); border:1px solid var(--line); }
 .panel p,.muted { color:var(--muted); }
+.about-img { width:100%; height:100%; max-height:650px; object-fit:cover; }
 .service-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:30px;
 }
-.service {
-  min-width:0;
-  border-top:1px solid var(--accent);
-  padding-top:18px;
-}
-.service h3 { font-size:24px; }
+.service { border-top:1px solid var(--accent); padding-top:18px; }
+.service h3 { font-size:23px; }
 .service p { color:var(--muted); }
-.credit-block {
-  min-width:0;
-  margin:35px 0;
+.credit-block { margin:28px 0; }
+.credit-block h3 { font-size:23px; color:var(--accent); }
+.photo-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
 }
-.credit-block h3 {
-  font-size:23px;
-  color:var(--accent);
+.photo-grid figure { margin:0; }
+.photo-grid img { width:100%; height:340px; object-fit:cover; }
+.photo-grid figcaption {
+  font-size:12px;
+  color:var(--muted);
+  padding:7px 0;
+}
+.performance-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+.performance-grid img {
+  width:100%;
+  height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
 }
 .gallery {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:16px;
-  margin-top:30px;
+  margin-top:28px;
 }
 .gallery a {
-  min-width:0;
-  min-height:175px;
+  min-height:150px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   background:var(--surface);
   border:1px solid var(--line);
-  padding:23px;
+  padding:22px;
   text-decoration:none;
-  transition:transform .2s,border-color .2s;
 }
-.gallery a:hover {
-  transform:translateY(-4px);
-  border-color:var(--accent);
-}
+.gallery a:hover { border-color:var(--accent); }
 .gallery small {
   color:var(--accent);
-  text-transform:uppercase;
   letter-spacing:2px;
+  text-transform:uppercase;
 }
 .gallery strong {
   font-family:Georgia,serif;
-  font-size:23px;
+  font-size:21px;
   font-weight:normal;
-  overflow-wrap:break-word;
 }
-.gallery span {
-  font-size:12px;
-  color:var(--muted);
-}
-.contact a {
-  color:var(--accent);
-  overflow-wrap:anywhere;
-}
-.social-links {
-  margin-top:35px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;
-}
-.social-links a {
-  color:var(--accent);
-  text-decoration:none;
-  border-bottom:1px solid var(--line);
-  padding-bottom:4px;
-}
+.gallery span { font-size:12px; color:var(--muted); }
+.contact a,.social a { color:var(--accent); }
+.social { display:flex; gap:18px; flex-wrap:wrap; margin-top:28px; }
+.social a { text-decoration:none; border-bottom:1px solid var(--line); }
 footer {
   padding:35px 0;
   border-top:1px solid var(--line);
   color:var(--muted);
   font-size:12px;
 }
-
-/* TABLET / IPAD */
-@media (min-width:481px) and (max-width:1400px) {
-  .wrap {
-    max-width:650px;
-    padding-left:30px;
-    padding-right:30px;
-  }
-  .two,.service-grid {
-    grid-template-columns:minmax(0,1fr);
-  }
-  .gallery {
+@media(max-width:800px) {
+  .hero,.two { grid-template-columns:1fr; }
+  .hero { padding:55px 0; }
+  .hero img { height:auto; max-height:620px; object-fit:contain; }
+  .service-grid,.photo-grid,.gallery {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
-  .panel { padding:28px; }
-  h1 { font-size:clamp(42px,7vw,68px); }
 }
-
-/* PHONE */
-@media (max-width:480px) {
-  .wrap {
-    max-width:100%;
-    padding-left:30px;
-    padding-right:30px;
-  }
-  .two,.service-grid,.gallery {
-    grid-template-columns:minmax(0,1fr);
-  }
+@media(max-width:520px) {
+  .wrap { width:calc(100% - 34px); }
+  .brand { font-size:18px; }
+  .navlinks { gap:11px; }
+  .navlinks a { font-size:10px; }
+  h1 { font-size:clamp(52px,15vw,75px); }
+  section { padding:60px 0; }
+  .service-grid,.gallery,.photo-grid { grid-template-columns:1fr; }
+  .performance-grid { grid-template-columns:1fr; }
+  .photo-grid img { height:auto; max-height:520px; }
   .panel { padding:24px; }
-  h1 {
-    font-size:clamp(38px,10vw,48px);
-    letter-spacing:-1px;
-  }
-  h2 { font-size:clamp(30px,8vw,40px); }
-  .navlinks { gap:12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="wrap">
-<nav>
-<a class="brand" href="#top">NICOLE HARDIN MUSIC</a>
-<div class="navlinks">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#credits">Credits</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-<a href="https://linktr.ee/Stringschick" target="_blank" rel="noopener noreferrer">Linktree</a>
-</div>
-</nav>
-</div>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">NICOLE HARDIN</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#services">Expertise</a>
+        <a href="#credits">Credits</a>
+        <a href="#performance">Performance</a>
+        <a href="#photos">Photos</a>
+        <a href="#gallery">Media</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
-
 <div class="wrap hero">
-<div class="eyebrow">Music · Artistry · Collaboration</div>
-
-<h1>The art of bringing music to life.</h1>
-
-<p class="lead">
-Creative vision and exceptional musicianship,
-from the recording studio to the concert stage.
-</p>
-
-<p class="roles">
-Producer · Session &amp; Performing/Touring Musician ·
-Orchestrator · Composer · Arranger · Conductor ·
-Educator · Consultant
-</p>
+  <div>
+    <div class="eyebrow">Music · Artistry · Collaboration</div>
+    <h1>NICOLE<br>HARDIN</h1>
+    <p class="tagline">The art of bringing music to life.</p>
+    <p>Creative vision and exceptional musicianship, from the recording studio to the concert stage.</p>
+    <p class="roles">Producer · Session &amp; Performing/Touring Musician · Orchestrator · Composer · Arranger · Conductor · Educator · Consultant</p>
+  </div>
+  <img src="nicole-hero.jpg" alt="Nicole Hardin with violin in front of a blue wall">
 </div>
-
-<!-- ABOUT -->
 
 <section id="about">
-<div class="wrap">
-
-<div class="eyebrow">About Nicole</div>
-<h2>Artistry without boundaries.</h2>
-
-<article class="panel">
-
-<div class="eyebrow">The Artist</div>
-<h3>Nicole Hardin</h3>
-
-<p>
-Nicole Hardin is a multifaceted music professional
-whose work spans music production, composition,
-orchestration, arranging, conducting, studio recording,
-and live performance.
-</p>
-
-<p>
-As a session and performing/touring musician,
-educator, and consultant, she brings artistic
-versatility, technical expertise, and creative
-leadership to projects across genres and
-performance settings.
-</p>
-
-<p>
-Her experience encompasses contemporary music,
-orchestral performance, television, recording
-sessions, and live productions. With a deep
-understanding of instrumental writing and
-collaborative artistry, Nicole approaches
-each project with a commitment to musical
-excellence and creative expression.
-</p>
-
-<p>
-An educator at heart, Nicole values musical
-development, mentorship, and the relationships
-that make meaningful collaboration possible.
-</p>
-
-<p>
-Nicole served as an elected Governor of the
-Recording Academy Nashville Chapter from
-2023–2025.
-</p>
-
-</article>
-
-</div>
+  <div class="wrap">
+    <div class="eyebrow">About Nicole</div>
+    <h2>Artistry without boundaries.</h2>
+    <div class="two">
+      <img class="about-img" src="nicole-violin-closeup.jpg" alt="Nicole Hardin playing violin">
+      <article class="panel">
+        <h3>Nicole Hardin</h3>
+        <p>Nicole Hardin is a multifaceted music professional whose work spans music production, composition, orchestration, arranging, conducting, studio recording, and live performance.</p>
+        <p>As a session and performing/touring musician, educator, and consultant, she brings artistic versatility, technical expertise, and creative leadership to projects across genres and performance settings.</p>
+        <p>Her experience encompasses contemporary music, orchestral performance, television, recording sessions, and live productions. With a deep understanding of instrumental writing and collaborative artistry, Nicole approaches each project with a commitment to musical excellence and creative expression.</p>
+        <p>An educator at heart, Nicole values musical development, mentorship, and the relationships that make meaningful collaboration possible.</p>
+        <p>Nicole served as an elected Governor of the Recording Academy Nashville Chapter from 2023–2025.</p>
+      </article>
+    </div>
+  </div>
 </section>
-
-<!-- SERVICES -->
 
 <section id="services">
-<div class="wrap">
-
-<div class="eyebrow">Areas of Expertise</div>
-<h2>From imagination to performance.</h2>
-
-<div class="service-grid">
-
-<div class="service">
-<h3>Music Production</h3>
-<p>
-Creative music production and collaboration
-with artists, composers, musicians, and
-production teams from concept to completion.
-</p>
-</div>
-
-<div class="service">
-<h3>Session &amp; Performing/Touring Musician</h3>
-<p>
-Professional musicianship for studio recordings,
-concert performances, television productions,
-live events, and touring engagements.
-</p>
-</div>
-
-<div class="service">
-<h3>Orchestration</h3>
-<p>
-Orchestral writing, instrumentation, and
-score development for recordings, concerts,
-television, and special productions.
-</p>
-</div>
-
-<div class="service">
-<h3>Composition</h3>
-<p>
-Original music for artists, orchestral
-ensembles, commissioned works, and
-creative projects.
-</p>
-</div>
-
-<div class="service">
-<h3>Arranging</h3>
-<p>
-Custom musical arrangements for strings,
-horns, vocals, rhythm sections, and
-instrumental ensembles across genres.
-</p>
-</div>
-
-<div class="service">
-<h3>Conducting</h3>
-<p>
-Musical leadership for orchestral concerts,
-recording sessions, staged productions,
-and collaborative performances.
-</p>
-</div>
-
-<div class="service">
-<h3>Music Education</h3>
-<p>
-Music instruction, ensemble development,
-mentorship, and educational experiences
-that support artistic and technical growth.
-</p>
-</div>
-
-<div class="service">
-<h3>Music Consulting</h3>
-<p>
-Creative and technical guidance in
-instrumentation, orchestration, ensemble
-planning, recording preparation, and
-musical project development.
-</p>
-</div>
-
-<div class="service">
-<h3>Musician Contracting</h3>
-<p>
-Professional musician selection, ensemble
-assembly, personnel coordination, and
-session planning for recording and
-live performance.
-</p>
-</div>
-
-</div>
-</div>
+  <div class="wrap">
+    <div class="eyebrow">Areas of Expertise</div>
+    <h2>From imagination to performance.</h2>
+    <div class="service-grid">
+      <div class="service"><h3>Music Production</h3><p>Creative music production and collaboration with artists, composers, musicians, and production teams from concept to completion.</p></div>
+      <div class="service"><h3>Session &amp; Touring Performance</h3><p>Professional musicianship for studio recordings, concerts, television productions, live events, and touring engagements.</p></div>
+      <div class="service"><h3>Orchestration</h3><p>Orchestral writing, instrumentation, and score development for recordings, concerts, television, and special productions.</p></div>
+      <div class="service"><h3>Composition</h3><p>Original music for artists, orchestral ensembles, commissioned works, and creative projects.</p></div>
+      <div class="service"><h3>Arranging</h3><p>Custom arrangements for strings, horns, vocals, rhythm sections, and instrumental ensembles across genres.</p></div>
+      <div class="service"><h3>Conducting</h3><p>Musical leadership for orchestral concerts, recording sessions, staged productions, and collaborative performances.</p></div>
+      <div class="service"><h3>Music Education</h3><p>Music instruction, ensemble development, mentorship, and educational experiences that support artistic and technical growth.</p></div>
+      <div class="service"><h3>Music Consulting</h3><p>Creative and technical guidance in instrumentation, orchestration, ensemble planning, recording preparation, and project development.</p></div>
+      <div class="service"><h3>Musician Contracting</h3><p>Professional musician selection, ensemble assembly, personnel coordination, and session planning for recording and live performance.</p></div>
+    </div>
+  </div>
 </section>
-
-<!-- CREDITS -->
 
 <section id="credits">
-<div class="wrap">
-
-<div class="eyebrow">Selected Experience</div>
-<h2>Work &amp; collaborations.</h2>
-
-<div class="two">
-
-<div>
-
-<div class="credit-block">
-<h3>Artist Collaborations</h3>
-<p>
-Earth, Wind &amp; Fire ·
-John Legend · Victoria Monét · Becky G ·
-TWICE · D Smoke · Sheila E. ·
-CeCe Winans · Tank · Flavour · Fantasia ·
-J. Ivy · Daniel Caesar · Tyla · H.E.R. ·
-Lauryn Hill &amp; The Fugees · T.I. ·
-Naomi Raine
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Television &amp; Awards</h3>
-<p>
-The GRAMMY Awards ·
-American Music Awards ·
-American Idol ·
-The Tonight Show Starring Jimmy Fallon ·
-Jimmy Kimmel Live! ·
-The Late Show with Stephen Colbert
-</p>
-<p class="muted">
-Selected professional credits across
-arranging, orchestration, and performance.
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Orchestral &amp; Operatic</h3>
-<p>
-Atlanta Symphony Orchestra ·
-Nashville Symphony ·
-Atlanta Opera
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Additional Orchestration</h3>
-<p>
-Mariah Carey · Bassic Black Entertainment
-</p>
-</div>
-
-</div>
-
-<div>
-
-<div class="credit-block">
-<h3>Additional Selected Projects</h3>
-<p>
-Tyla · Fantasia · Mariah Carey ·
-Coco Jones · Take 6 ·
-The War &amp; Treaty ·
-J. Ivy · Daniel Caesar
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Live Performance</h3>
-<p>
-Mary J. Blige · Rihanna · Beyoncé ·
-Kenny Rogers (CMA) · P!nk ·
-Kacey Musgraves · Dan + Shay ·
-Lizzo · Jay-Z · Natalie Grant
-</p>
-</div>
-
-<div class="credit-block">
-<h3>Creative Leadership</h3>
-<p>
-Recording Academy Nashville Chapter Governor,
-2023–2025.
-</p>
-</div>
-
-</div>
-
-</div>
-</div>
+  <div class="wrap">
+    <div class="eyebrow">Selected Experience</div>
+    <h2>Work &amp; collaborations.</h2>
+    <div class="two">
+      <div>
+        <div class="credit-block">
+          <h3>Artist Collaborations</h3>
+          <p>Earth, Wind &amp; Fire · John Legend · Victoria Monét · Becky G · TWICE · D Smoke · Sheila E. · CeCe Winans · Tank · Flavour · Fantasia · J. Ivy · Daniel Caesar · Tyla · H.E.R. · Lauryn Hill &amp; The Fugees · T.I. · Naomi Raine</p>
+        </div>
+        <div class="credit-block">
+          <h3>Television &amp; Awards</h3>
+          <p>The GRAMMY Awards · American Music Awards · American Idol · The Tonight Show Starring Jimmy Fallon · Jimmy Kimmel Live! · The Late Show with Stephen Colbert</p>
+        </div>
+        <div class="credit-block">
+          <h3>Orchestral &amp; Operatic</h3>
+          <p>Atlanta Symphony Orchestra · Nashville Symphony · Atlanta Opera</p>
+        </div>
+        <div class="credit-block">
+          <h3>Additional Orchestration</h3>
+          <p>Mariah Carey · Bassic Black Entertainment</p>
+        </div>
+      </div>
+      <div>
+        <div class="credit-block">
+          <h3>Additional Selected Projects</h3>
+          <p>Tyla · Fantasia · Mariah Carey · Coco Jones · Take 6 · The War &amp; Treaty · J. Ivy · Daniel Caesar</p>
+        </div>
+        <div class="credit-block">
+          <h3>Live Performance</h3>
+          <p>Mary J. Blige · Rihanna · Beyoncé · Kenny Rogers (CMA) · P!nk · Kacey Musgraves · Dan + Shay · Lizzo · Jay-Z · Natalie Grant</p>
+        </div>
+        <div class="credit-block">
+          <h3>Creative Leadership</h3>
+          <p>Recording Academy Nashville Chapter Governor, 2023–2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- GALLERY -->
+<section id="performance">
+  <div class="wrap">
+    <div class="eyebrow">On Stage</div>
+    <h2>Live performance.</h2>
+    <p class="muted">Behind the scenes, moments before the music reaches the audience.</p>
+    <div class="performance-grid">
+      <img loading="lazy" src="nicole-performance-1.jpg" alt="Nicole Hardin backstage overlooking a large outdoor concert audience">
+      <img loading="lazy" src="nicole-performance-2.jpg" alt="Nicole Hardin preparing backstage at an outdoor concert">
+    </div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="wrap">
+    <div class="eyebrow">Artist Portraits</div>
+    <h2>Behind the artistry.</h2>
+    <div class="photo-grid">
+      <figure>
+        <img loading="lazy" src="nicole-portrait-violin.jpg" alt="Nicole Hardin standing with violin">
+        <figcaption>Portrait with violin</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="nicole-blue-portrait.jpg" alt="Nicole Hardin portrait against blue background">
+        <figcaption>Artist portrait</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="nicole-conducting.jpg" alt="Nicole Hardin with violin and bow in black-and-white portrait">
+        <figcaption>Musician and conductor</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="nicole-city-portrait.jpg" alt="Nicole Hardin photographed against a city skyline">
+        <figcaption>Artist portrait</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="nicole-artistic-portrait.jpg" alt="Creative double exposure portrait of Nicole Hardin">
+        <figcaption>Creative portrait</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="nicole-black-white.jpg" alt="Black and white full-length portrait of Nicole Hardin with violin">
+        <figcaption>Black-and-white portrait</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <section id="gallery">
-<div class="wrap">
-
-<div class="eyebrow">Selected Media</div>
-<h2>Watch &amp; Listen.</h2>
-
-<p class="muted">
-A collection of performances, recordings,
-and creative moments. Select a tile to
-open the original post.
-</p>
-
-<div class="gallery">
-
-<a href="https://www.instagram.com/p/DHO5Qihuu2l/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 01</strong>
-<span>View post ↗</span>
-</a>
-
-<a href="https://www.instagram.com/reel/DURB1TZAR7c/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 02</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.instagram.com/reel/De8SK8uClAs/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 03</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.instagram.com/reel/CiSkwbrogNa/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 04</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.instagram.com/tv/CboMEU9I85J/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 05</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.instagram.com/tv/CdCa7_DoPsN/" target="_blank" rel="noopener noreferrer">
-<small>Instagram</small>
-<strong>Selected Work 06</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/r/1NS2HVTEhx/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 07</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/1FnktcXPxr/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 08</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/19oXeUYtwG/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 09</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/1DSutTJDTM/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 10</strong>
-<span>Watch video ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/r/19DzVFBjdp/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 11</strong>
-<span>Watch reel ↗</span>
-</a>
-
-<a href="https://www.facebook.com/share/v/1CFseBzRus/" target="_blank" rel="noopener noreferrer">
-<small>Facebook</small>
-<strong>Selected Work 12</strong>
-<span>Watch video ↗</span>
-</a>
-
-</div>
-</div>
+  <div class="wrap">
+    <div class="eyebrow">Selected Media</div>
+    <h2>Watch &amp; Listen.</h2>
+    <p class="muted">A collection of performances, recordings, and creative moments. Select a tile to open the original post.</p>
+    <div class="gallery">
+      <a href="https://www.instagram.com/p/DHO5Qihuu2l/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 01</strong><span>Open original ↗</span></a>
+      <a href="https://www.instagram.com/reel/DURB1TZAR7c/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 02</strong><span>Open original ↗</span></a>
+      <a href="https://www.instagram.com/reel/De8SK8uClAs/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 03</strong><span>Open original ↗</span></a>
+      <a href="https://www.instagram.com/reel/CiSkwbrogNa/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 04</strong><span>Open original ↗</span></a>
+      <a href="https://www.instagram.com/tv/CboMEU9I85J/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 05</strong><span>Open original ↗</span></a>
+      <a href="https://www.instagram.com/tv/CdCa7_DoPsN/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><strong>Selected Work 06</strong><span>Open original ↗</span></a>
+      <a href="https://www.facebook.com/share/r/1NS2HVTEhx/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 07</strong><span>Open original ↗</span></a>
+      <a href="https://www.facebook.com/share/v/1FnktcXPxr/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 08</strong><span>Open original ↗</span></a>
+      <a href="https://www.facebook.com/share/v/19oXeUYtwG/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 09</strong><span>Open original ↗</span></a>
+      <a href="https://www.facebook.com/share/v/1DSutTJDTM/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 10</strong><span>Open original ↗</span></a>
+      <a href="https://www.facebook.com/share/r/19DzVFBjdp/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 11</strong><span>Open original ↗</span></a>
+      <a href="https://www.facebook.com/share/v/1CFseBzRus/" target="_blank" rel="noopener noreferrer"><small>Facebook</small><strong>Selected Work 12</strong><span>Open original ↗</span></a>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-<div class="wrap">
-
-<div class="eyebrow">Let's Collaborate</div>
-<h2>Let's make something extraordinary.</h2>
-
-<h3>Nicole Hardin</h3>
-
-<p>
-For music production, recording, performance,
-touring, orchestration, composition,
-arranging, conducting, education,
-consulting, and musician contracting inquiries.
-</p>
-
-<p>
-<a href="mailto:stringschickmusic@gmail.com">
-stringschickmusic@gmail.com
-</a>
-</p>
-
-<div class="social-links">
-
-<a href="https://linktr.ee/Stringschick" target="_blank" rel="noopener noreferrer">
-Linktree
-</a>
-
-<a href="https://www.instagram.com/stringschick/" target="_blank" rel="noopener noreferrer">
-Instagram
-</a>
-
-<a href="https://www.facebook.com/share/1dvphjsjcH/" target="_blank" rel="noopener noreferrer">
-Facebook
-</a>
-
-</div>
-
-</div>
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Let's Collaborate</div>
+    <h2>Let's make something extraordinary.</h2>
+    <p>For production, recording, performance, touring, orchestration, composition, arranging, conducting, education, consulting, and musician contracting inquiries.</p>
+    <p><a href="mailto:stringschickmusic@gmail.com">stringschickmusic@gmail.com</a></p>
+    <div class="social">
+      <a href="https://linktr.ee/Stringschick" target="_blank" rel="noopener noreferrer">Linktree</a>
+      <a href="https://www.instagram.com/stringschick/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/share/1dvphjsjcH/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+  </div>
 </section>
 
 </main>
-
-<!-- FOOTER -->
-
 <footer>
-<div class="wrap">
-© <span id="year"></span> Nicole Hardin Music.
-All rights reserved.
-</div>
+  <div class="wrap">
+    © <span id="year"></span> Nicole Hardin Music. All rights reserved.
+  </div>
 </footer>
-
 <script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
