@@ -153,6 +153,32 @@ h3 {
   color:var(--ink)!important;
 }
 
+.booking-button {
+  display:inline-block;
+  margin-top:22px;
+  padding:15px 25px;
+  background:var(--accent);
+  color:var(--bg);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--accent);
+  transition:background .2s ease,color .2s ease;
+}
+
+.booking-button:hover,
+.booking-button:focus-visible {
+  background:transparent;
+  color:var(--accent);
+}
+
+.booking-button:focus-visible {
+  outline:2px solid var(--ink);
+  outline-offset:4px;
+}
+
 section {
   padding:85px 0;
   border-top:1px solid var(--line);
@@ -280,6 +306,9 @@ section:nth-of-type(even) {
 
 .contact a,.social a { color:var(--accent); }
 
+.contact .booking-button { color:var(--bg); }
+.contact .booking-button:hover { color:var(--accent); }
+
 .social {
   display:flex;
   gap:18px;
@@ -339,10 +368,16 @@ footer {
   }
 
   .panel { padding:24px; }
+
+  .booking-button {
+    text-align:center;
+    max-width:100%;
+  }
 }
 
 @media(prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
+  .booking-button { transition:none; }
 }
 </style>
 </head>
@@ -361,6 +396,7 @@ footer {
         <a href="#photos">Photos</a>
         <a href="#gallery">Media</a>
         <a href="#contact">Contact</a>
+        <a href="#booking">Booking</a>
       </div>
     </nav>
   </div>
@@ -375,6 +411,7 @@ footer {
     <p class="tagline">The art of bringing music to life.</p>
     <p>Creative vision and exceptional musicianship, from the recording studio to the concert stage.</p>
     <p class="roles">Producer · Session &amp; Performing/Touring Musician · Orchestrator · Composer · Arranger · Conductor · Educator · Consultant</p>
+    <a class="booking-button" href="https://go.forms.app/form/6ae4c6e20d190bfbb94704fc" target="_blank" rel="noopener noreferrer">Booking &amp; Project Inquiry</a>
   </div>
   <img src="nicole-hero.jpg" alt="Nicole Hardin with violin in front of a blue wall">
 </div>
@@ -519,12 +556,16 @@ footer {
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="contact">
   <div class="wrap">
     <div class="eyebrow">Let's Collaborate</div>
     <h2>Let's make something extraordinary.</h2>
-    <p>For production, recording, performance, touring, orchestration, composition, arranging, conducting, education, consulting, and musician contracting inquiries.</p>
-    <p><a href="mailto:stringschickmusic@gmail.com">stringschickmusic@gmail.com</a></p>
+    <p>For production, recording, performance, touring, orchestration, composition, arranging, conducting, education, consulting, commissions, and musician contracting inquiries.</p>
+    <p>Have a project in mind? Share the details through the booking form below.</p>
+    <div id="booking">
+      <a class="booking-button" href="https://go.forms.app/form/6ae4c6e20d190bfbb94704fc" target="_blank" rel="noopener noreferrer">Submit a Booking &amp; Project Inquiry</a>
+    </div>
+    <p>For general correspondence: <a href="mailto:stringschickmusic@gmail.com">stringschickmusic@gmail.com</a></p>
     <div class="social">
       <a href="https://linktr.ee/Stringschick" target="_blank" rel="noopener noreferrer">Linktree</a>
       <a href="https://www.instagram.com/stringschick/" target="_blank" rel="noopener noreferrer">Instagram</a>
