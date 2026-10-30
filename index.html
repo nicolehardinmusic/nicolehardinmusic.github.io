@@ -24,15 +24,28 @@
   --line:#45566a;
 }
 
-* { box-sizing:border-box; }
+* {
+  box-sizing:border-box;
+}
 
-html { scroll-behavior:smooth; }
+html {
+  scroll-behavior:smooth;
+}
 
 body {
   margin:0;
   background:
-    radial-gradient(ellipse at 88% 8%,#203c5b 0%,transparent 32%),
-    linear-gradient(130deg,#0c1725,#15273c 55%,#0e1b2b);
+    radial-gradient(
+      ellipse at 88% 8%,
+      #203c5b 0%,
+      transparent 32%
+    ),
+    linear-gradient(
+      130deg,
+      #0c1725,
+      #15273c 55%,
+      #0e1b2b
+    );
   background-attachment:fixed;
   color:var(--ink);
   font-family:Arial,Helvetica,sans-serif;
@@ -40,7 +53,9 @@ body {
   overflow-x:hidden;
 }
 
-a { color:inherit; }
+a {
+  color:inherit;
+}
 
 .wrap {
   width:min(1140px,calc(100% - 48px));
@@ -153,7 +168,7 @@ h3 {
   color:var(--ink)!important;
 }
 
-/* BOOKING BUTTONS */
+/* BUTTONS */
 
 .booking-button {
   display:inline-block;
@@ -248,7 +263,7 @@ section:nth-of-type(even) {
   color:var(--accent);
 }
 
-/* ORIGINAL WORKS & COMMISSIONS */
+/* ORIGINAL WORKS AND COMMISSIONS */
 
 .commission-grid {
   display:grid;
@@ -262,6 +277,7 @@ section:nth-of-type(even) {
   background:rgba(27,43,64,.88);
   border:1px solid var(--line);
   border-top:2px solid var(--accent);
+  min-width:0;
 }
 
 .commission .commission-meta {
@@ -293,6 +309,51 @@ section:nth-of-type(even) {
   padding-top:14px;
   color:var(--accent);
   font-size:12px;
+}
+
+.commission-video {
+  width:100%;
+  height:auto;
+  display:block;
+  margin-top:22px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:#000;
+}
+
+.commission-video-label {
+  display:block;
+  margin-top:12px;
+  font-size:12px;
+  color:var(--accent);
+  font-weight:bold;
+}
+
+.commission-video-note {
+  display:block;
+  margin-top:7px;
+  font-size:11px;
+  color:var(--muted);
+}
+
+.commission-watch {
+  display:inline-block;
+  margin-top:22px;
+  padding:13px 18px;
+  background:var(--accent);
+  color:var(--bg);
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--accent);
+}
+
+.commission-watch:hover,
+.commission-watch:focus-visible {
+  background:transparent;
+  color:var(--accent);
 }
 
 /* PHOTO GALLERY */
@@ -837,6 +898,28 @@ footer {
         <div class="commission-role">
           Arranger &amp; Orchestrator · Full Orchestra
         </div>
+
+        <span class="commission-video-label">
+          Watch: Young Warrior — Nashville Symphony Orchestra
+        </span>
+
+        <video
+          class="commission-video"
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="Young Warrior performance video"
+        >
+          <source
+            src="Young_Warrior_Nashville_Symphony_Web.mp4"
+            type="video/mp4"
+          >
+          Your browser does not support HTML5 video.
+        </video>
+
+        <span class="commission-video-note">
+          Select play to watch the performance.
+        </span>
       </article>
 
       <!-- CAPE VERDEAN SUITE -->
@@ -867,6 +950,28 @@ footer {
         <div class="commission-role">
           Composer &amp; Arranger · Full Orchestra
         </div>
+
+        <span class="commission-video-label">
+          Watch: Cape Verdean Suite — Atlanta Music Project
+        </span>
+
+        <video
+          class="commission-video"
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="Cape Verdean Suite performance video"
+        >
+          <source
+            src="Cape_Verdean_Suite_AMP_Web.mp4"
+            type="video/mp4"
+          >
+          Your browser does not support HTML5 video.
+        </video>
+
+        <span class="commission-video-note">
+          Select play to watch the performance.
+        </span>
       </article>
 
       <!-- FLAVOUR ORCHESTRATED -->
@@ -897,6 +1002,19 @@ footer {
         <div class="commission-role">
           Arranger &amp; Orchestrator · Full Orchestra
         </div>
+
+        <a
+          class="commission-watch"
+          href="https://www.facebook.com/share/v/1FnktcXPxr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch Flavour: Orchestrated ↗
+        </a>
+
+        <span class="commission-video-note">
+          Opens the performance video on Facebook.
+        </span>
       </article>
 
     </div>
