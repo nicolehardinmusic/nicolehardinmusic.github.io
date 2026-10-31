@@ -4,7 +4,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>Nicole Hardin | Musician, Producer, Composer &amp; Conductor</title>
 <meta name="description" content="Nicole Hardin — music producer, musician, orchestrator, composer, arranger, conductor, educator and consultant.">
 <meta property="og:type" content="website">
@@ -25,7 +24,6 @@
 }
 
 * { box-sizing:border-box; }
-
 html { scroll-behavior:smooth; }
 
 body {
@@ -71,9 +69,7 @@ nav,.navlinks {
 }
 
 .navlinks a:hover,
-.social a:hover {
-  color:var(--accent);
-}
+.social a:hover { color:var(--accent); }
 
 /* TYPOGRAPHY */
 
@@ -166,8 +162,8 @@ h3 {
 }
 
 .booking-button:hover,
-.booking-button:focus-visible,
 .commission-watch:hover,
+.booking-button:focus-visible,
 .commission-watch:focus-visible {
   background:transparent;
   color:var(--accent);
@@ -242,9 +238,7 @@ section:nth-of-type(even) {
   color:var(--accent);
 }
 
-.highlight-credits p {
-  font-size:14px;
-}
+.highlight-credits p { font-size:14px; }
 
 /* COMMISSIONS */
 
@@ -342,6 +336,7 @@ section:nth-of-type(even) {
 .photo-grid figure { margin:0; }
 
 .photo-grid img {
+  display:block;
   width:100%;
   height:340px;
   object-fit:cover;
@@ -353,7 +348,15 @@ section:nth-of-type(even) {
   padding:7px 0;
 }
 
-/* AT WORK — SMALLER, UNCROPPED PHOTOS */
+/* Keep the complete violin portrait visible */
+
+.photo-grid img[src="nicole-portrait-violin.jpg"] {
+  object-fit:contain;
+  object-position:center center;
+  background:#101b2b;
+}
+
+/* AT WORK — COMPACT PHOTO GALLERY */
 
 .at-work-gallery {
   display:grid;
@@ -385,6 +388,19 @@ section:nth-of-type(even) {
   text-align:center;
   color:var(--muted);
   font-size:11px;
+}
+
+/* FEATURED LIVE-STAGE PHOTO */
+
+.at-work-gallery .featured-stage {
+  grid-column:span 2;
+}
+
+.at-work-gallery .featured-stage img {
+  width:100%;
+  height:355px;
+  object-fit:contain;
+  object-position:center;
 }
 
 /* WATCH & LISTEN — SQUARE THUMBNAILS */
@@ -617,7 +633,17 @@ footer {
   }
 
   .at-work-gallery img { height:160px; }
+
   .at-work-gallery figure { padding:5px; }
+
+  .at-work-gallery .featured-stage {
+    grid-column:span 2;
+  }
+
+  .at-work-gallery .featured-stage img {
+    height:auto;
+    max-height:440px;
+  }
 
   .gallery img {
     width:min(100%,175px);
@@ -1044,8 +1070,9 @@ footer {
       <video class="commission-video"
              controls playsinline preload="metadata"
              aria-label="Young Warrior performance video">
-        <source src="Young_Warrior_Nashville_Symphony_Web.mp4"
-                type="video/mp4">
+        <source
+          src="Young_Warrior_Nashville_Symphony_Web.mp4"
+          type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
 
@@ -1089,8 +1116,9 @@ footer {
       <video class="commission-video"
              controls playsinline preload="metadata"
              aria-label="Cape Verdean Suite performance video">
-        <source src="Cape_Verdean_Suite_AMP_Web.mp4"
-                type="video/mp4">
+        <source
+          src="Cape_Verdean_Suite_AMP_Web.mp4"
+          type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
 
@@ -1178,37 +1206,43 @@ footer {
   <div class="photo-grid">
 
     <figure>
-      <img loading="lazy" src="nicole-portrait-violin.jpg"
+      <img loading="lazy"
+           src="nicole-portrait-violin.jpg"
            alt="Nicole Hardin standing with violin">
       <figcaption>Portrait with violin</figcaption>
     </figure>
 
     <figure>
-      <img loading="lazy" src="nicole-blue-portrait.jpg"
+      <img loading="lazy"
+           src="nicole-blue-portrait.jpg"
            alt="Nicole Hardin portrait against blue background">
       <figcaption>Artist portrait</figcaption>
     </figure>
 
     <figure>
-      <img loading="lazy" src="nicole-conducting.jpg"
+      <img loading="lazy"
+           src="nicole-conducting.jpg"
            alt="Nicole Hardin in a black-and-white portrait with violin">
       <figcaption>Musician and conductor</figcaption>
     </figure>
 
     <figure>
-      <img loading="lazy" src="nicole-city-portrait.jpg"
+      <img loading="lazy"
+           src="nicole-city-portrait.jpg"
            alt="Nicole Hardin photographed against a city skyline">
       <figcaption>Artist portrait</figcaption>
     </figure>
 
     <figure>
-      <img loading="lazy" src="nicole-artistic-portrait.jpg"
+      <img loading="lazy"
+           src="nicole-artistic-portrait.jpg"
            alt="Creative double-exposure portrait of Nicole Hardin">
       <figcaption>Creative portrait</figcaption>
     </figure>
 
     <figure>
-      <img loading="lazy" src="nicole-black-white.jpg"
+      <img loading="lazy"
+           src="nicole-black-white.jpg"
            alt="Black-and-white portrait of Nicole Hardin with violin">
       <figcaption>Black-and-white portrait</figcaption>
     </figure>
@@ -1267,10 +1301,12 @@ footer {
       <figcaption>Live performance</figcaption>
     </figure>
 
-    <figure>
+    <!-- ENLARGED LIVE-STAGE PHOTOGRAPH -->
+
+    <figure class="featured-stage">
       <img loading="lazy"
            src="at-work-06-live-stage-performance.jpg"
-           alt="Large stage with live musicians">
+           alt="Large live stage with musicians">
       <figcaption>Performance stage</figcaption>
     </figure>
 
@@ -1309,7 +1345,7 @@ footer {
       <figcaption>Backstage moments</figcaption>
     </figure>
 
-    <!-- Heisman Instagram group screenshot removed -->
+    <!-- Heisman group Instagram screenshot remains removed -->
 
     <figure>
       <img loading="lazy"
@@ -1332,12 +1368,7 @@ footer {
       <figcaption>Heisman string ensemble</figcaption>
     </figure>
 
-    <figure>
-      <img loading="lazy"
-           src="at-work-16-backstage-string-musicians.jpg"
-           alt="String musicians backstage">
-      <figcaption>String ensemble</figcaption>
-    </figure>
+    <!-- at-work-16-backstage-string-musicians.jpg removed -->
 
     <figure>
       <img loading="lazy"
