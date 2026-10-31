@@ -25,7 +25,6 @@
 }
 
 * { box-sizing:border-box; }
-
 html { scroll-behavior:smooth; }
 
 body {
@@ -55,19 +54,12 @@ header {
   background:rgba(8,18,32,.65);
 }
 
-nav {
+nav,.navlinks {
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:22px;
-  flex-wrap:wrap;
-}
-
-.navlinks {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
   gap:16px;
+  flex-wrap:wrap;
 }
 
 .navlinks a {
@@ -77,8 +69,7 @@ nav {
   letter-spacing:1px;
 }
 
-.navlinks a:hover,
-.social a:hover {
+.navlinks a:hover,.social a:hover {
   color:var(--accent);
 }
 
@@ -155,7 +146,7 @@ h3 {
 
 /* BUTTONS */
 
-.booking-button {
+.booking-button,.commission-watch {
   display:inline-block;
   margin-top:22px;
   padding:15px 25px;
@@ -167,18 +158,14 @@ h3 {
   text-transform:uppercase;
   text-decoration:none;
   border:1px solid var(--accent);
-  transition:background .2s ease,color .2s ease;
 }
 
 .booking-button:hover,
-.booking-button:focus-visible {
+.commission-watch:hover,
+.booking-button:focus-visible,
+.commission-watch:focus-visible {
   background:transparent;
   color:var(--accent);
-}
-
-.booking-button:focus-visible {
-  outline:2px solid var(--ink);
-  outline-offset:4px;
 }
 
 /* SECTIONS */
@@ -204,8 +191,7 @@ section:nth-of-type(even) {
   border:1px solid var(--line);
 }
 
-.panel p,
-.muted {
+.panel p,.muted {
   color:var(--muted);
 }
 
@@ -216,7 +202,7 @@ section:nth-of-type(even) {
   object-fit:cover;
 }
 
-/* SERVICES */
+/* EXPERTISE */
 
 .service-grid {
   display:grid;
@@ -230,7 +216,6 @@ section:nth-of-type(even) {
 }
 
 .service h3 { font-size:23px; }
-
 .service p { color:var(--muted); }
 
 /* CREDITS */
@@ -241,6 +226,20 @@ section:nth-of-type(even) {
   font-size:23px;
   color:var(--accent);
 }
+
+.highlight-credits {
+  padding:25px 30px;
+  margin-top:20px;
+  background:rgba(27,43,64,.7);
+  border-left:2px solid var(--accent);
+}
+
+.highlight-credits h3 {
+  font-size:22px;
+  color:var(--accent);
+}
+
+.highlight-credits p { font-size:14px; }
 
 /* COMMISSIONS */
 
@@ -259,7 +258,7 @@ section:nth-of-type(even) {
   min-width:0;
 }
 
-.commission-meta {
+.commission-meta,.commission-role {
   color:var(--accent);
   font-size:11px;
   text-transform:uppercase;
@@ -274,7 +273,6 @@ section:nth-of-type(even) {
 .commission-byline {
   font-weight:bold;
   font-size:13px;
-  color:var(--ink);
 }
 
 .commission p {
@@ -286,8 +284,6 @@ section:nth-of-type(even) {
   border-top:1px solid var(--line);
   margin-top:22px;
   padding-top:14px;
-  color:var(--accent);
-  font-size:12px;
 }
 
 .commission-video {
@@ -313,26 +309,6 @@ section:nth-of-type(even) {
   margin-top:7px;
   font-size:11px;
   color:var(--muted);
-}
-
-.commission-watch {
-  display:inline-block;
-  margin-top:22px;
-  padding:13px 18px;
-  background:var(--accent);
-  color:var(--bg);
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  text-decoration:none;
-  border:1px solid var(--accent);
-}
-
-.commission-watch:hover,
-.commission-watch:focus-visible {
-  background:transparent;
-  color:var(--accent);
 }
 
 /* PHOTOGRAPHS */
@@ -365,37 +341,49 @@ section:nth-of-type(even) {
 
 .performance-grid img {
   width:100%;
-  height:auto;
   aspect-ratio:4/3;
   object-fit:cover;
 }
 
-/* WATCH AND LISTEN */
+/* WATCH & LISTEN */
 
 .gallery {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px;
+  gap:18px;
   margin-top:28px;
 }
 
 .gallery a {
-  min-height:215px;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  gap:13px;
+  gap:12px;
   background:rgba(27,43,64,.88);
   border:1px solid var(--line);
-  padding:24px;
   text-decoration:none;
-  transition:border-color .2s ease,transform .2s ease;
+  overflow:hidden;
+  transition:border-color .2s,transform .2s;
 }
 
-.gallery a:hover,
-.gallery a:focus-visible {
+.gallery a:hover,.gallery a:focus-visible {
   border-color:var(--accent);
   transform:translateY(-3px);
+}
+
+.gallery img {
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:#101b2b;
+}
+
+.gallery .gallery-copy {
+  padding:5px 23px 23px;
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+  flex:1;
 }
 
 .gallery small {
@@ -406,33 +394,30 @@ section:nth-of-type(even) {
 }
 
 .gallery strong {
-  display:block;
   font-family:Georgia,serif;
   font-size:22px;
   font-weight:normal;
   line-height:1.25;
 }
 
-.gallery .media-role {
-  display:block;
-  color:var(--ink);
+.media-role {
   font-size:12px;
   line-height:1.55;
 }
 
-.gallery .media-description {
-  display:block;
+.media-description {
   font-size:12px;
   color:var(--muted);
   line-height:1.6;
 }
 
-.gallery .media-open {
+.media-open {
   font-size:11px;
   color:var(--accent);
   letter-spacing:1px;
   text-transform:uppercase;
   margin-top:auto;
+  padding-top:8px;
 }
 
 /* TESTIMONIALS */
@@ -474,10 +459,9 @@ section:nth-of-type(even) {
 }
 
 .testimonial-quote {
-  font-family:Georgia,'Times New Roman',serif;
+  font-family:Georgia,serif;
   font-size:19px;
   font-style:italic;
-  color:var(--ink);
   line-height:1.65;
   margin:0 0 28px;
 }
@@ -503,13 +487,8 @@ section:nth-of-type(even) {
 
 /* CONTACT */
 
-.contact a,
-.social a {
-  color:var(--accent);
-}
-
+.contact a,.social a { color:var(--accent); }
 .contact .booking-button { color:var(--bg); }
-
 .contact .booking-button:hover { color:var(--accent); }
 
 .social {
@@ -537,19 +516,15 @@ footer {
 
 @media(max-width:800px) {
   .hero,.two { grid-template-columns:1fr; }
-
   .hero { padding:55px 0; }
-
   .hero img {
     height:auto;
     max-height:620px;
     object-fit:contain;
   }
-
   .service-grid,.photo-grid,.gallery {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
-
   .commission-grid,.testimonial-grid {
     grid-template-columns:1fr;
   }
@@ -559,44 +534,24 @@ footer {
 
 @media(max-width:520px) {
   .wrap { width:calc(100% - 34px); }
-
-  .navlinks {
-    gap:11px;
-    justify-content:center;
-  }
-
+  .navlinks { gap:11px; }
   .navlinks a { font-size:10px; }
-
   h1 { font-size:clamp(52px,15vw,75px); }
-
   section { padding:60px 0; }
-
-  .service-grid,.gallery,.photo-grid {
+  .service-grid,.gallery,.photo-grid,.performance-grid {
     grid-template-columns:1fr;
   }
-
-  .performance-grid { grid-template-columns:1fr; }
-
   .photo-grid img {
     height:auto;
     max-height:520px;
   }
-
   .panel,.testimonial-card { padding:24px; }
-
   .testimonial-quote { font-size:17px; }
-
-  .booking-button {
-    text-align:center;
-    max-width:100%;
-  }
-
-  .gallery a { min-height:185px; }
 }
 
 @media(prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
-  .booking-button,.gallery a { transition:none; }
+  .gallery a { transition:none; }
   .gallery a:hover { transform:none; }
 }
 </style>
@@ -650,20 +605,15 @@ footer {
       Educator · Consultant
     </p>
 
-    <a
-      class="booking-button"
-      href="https://go.forms.app/form/6ae4c6e20d190bfbb94704fc"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a class="booking-button"
+       href="https://go.forms.app/form/6ae4c6e20d190bfbb94704fc"
+       target="_blank" rel="noopener noreferrer">
       Booking &amp; Project Inquiry
     </a>
   </div>
 
-  <img
-    src="nicole-hero.jpg"
-    alt="Nicole Hardin with violin in front of a blue wall"
-  >
+  <img src="nicole-hero.jpg"
+       alt="Nicole Hardin with violin in front of a blue wall">
 </div>
 
 <!-- ABOUT -->
@@ -674,11 +624,9 @@ footer {
     <h2>Artistry without boundaries.</h2>
 
     <div class="two">
-      <img
-        class="about-img"
-        src="nicole-violin-closeup.jpg"
-        alt="Nicole Hardin playing violin"
-      >
+      <img class="about-img"
+           src="nicole-violin-closeup.jpg"
+           alt="Nicole Hardin playing violin">
 
       <article class="panel">
         <h3>Nicole Hardin</h3>
@@ -694,17 +642,18 @@ footer {
           As a session and performing/touring musician,
           educator, and consultant, she brings artistic
           versatility, technical expertise, and creative
-          leadership to projects across genres and performance
-          settings.
+          leadership to projects across genres and
+          performance settings.
         </p>
 
         <p>
           Her experience encompasses contemporary music,
           orchestral performance, television, recording
           sessions, and live productions. With a deep
-          understanding of instrumental writing and collaborative
-          artistry, Nicole approaches each project with a
-          commitment to musical excellence and creative expression.
+          understanding of instrumental writing and
+          collaborative artistry, Nicole approaches each
+          project with a commitment to musical excellence
+          and creative expression.
         </p>
 
         <p>
@@ -730,50 +679,87 @@ footer {
     <h2>From imagination to performance.</h2>
 
     <div class="service-grid">
-      <div class="service">
+
+      <article class="service">
         <h3>Music Production</h3>
-        <p>Creative music production and collaboration with artists, composers, musicians, and production teams from concept to completion.</p>
-      </div>
+        <p>
+          Creative music production and collaboration with
+          artists, composers, musicians, and production teams
+          from concept to completion.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Session &amp; Touring Performance</h3>
-        <p>Professional musicianship for studio recordings, concerts, television productions, live events, and touring engagements.</p>
-      </div>
+        <p>
+          Professional musicianship for studio recordings,
+          concerts, television productions, live events,
+          and touring engagements.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Orchestration</h3>
-        <p>Orchestral writing, instrumentation, and score development for recordings, concerts, television, and special productions.</p>
-      </div>
+        <p>
+          Orchestral writing, instrumentation, and score
+          development for recordings, concerts, television,
+          and special productions.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Composition</h3>
-        <p>Original music for artists, orchestral ensembles, commissioned works, and creative projects.</p>
-      </div>
+        <p>
+          Original music for artists, orchestral ensembles,
+          commissioned works, and creative projects.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Arranging</h3>
-        <p>Custom arrangements for strings, horns, vocals, rhythm sections, and instrumental ensembles across genres.</p>
-      </div>
+        <p>
+          Custom arrangements for strings, horns, vocals,
+          rhythm sections, and instrumental ensembles
+          across genres.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Conducting</h3>
-        <p>Musical leadership for orchestral concerts, recording sessions, staged productions, and collaborative performances.</p>
-      </div>
+        <p>
+          Musical leadership for orchestral concerts,
+          recording sessions, staged productions,
+          and collaborative performances.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Music Education</h3>
-        <p>Music instruction, ensemble development, mentorship, and educational experiences that support artistic and technical growth.</p>
-      </div>
+        <p>
+          Music instruction, ensemble development,
+          mentorship, and educational experiences
+          supporting artistic and technical growth.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Music Consulting</h3>
-        <p>Creative and technical guidance in instrumentation, orchestration, ensemble planning, recording preparation, and project development.</p>
-      </div>
+        <p>
+          Creative and technical guidance in instrumentation,
+          orchestration, ensemble planning, recording
+          preparation, and project development.
+        </p>
+      </article>
 
-      <div class="service">
+      <article class="service">
         <h3>Musician Contracting</h3>
-        <p>Professional musician selection, ensemble assembly, personnel coordination, and session planning for recording and live performance.</p>
-      </div>
+        <p>
+          Professional musician selection, ensemble assembly,
+          personnel coordination, and session planning
+          for recording and live performance.
+        </p>
+      </article>
+
     </div>
   </div>
 </section>
@@ -795,15 +781,22 @@ footer {
             TWICE · D Smoke · Sheila E. · CeCe Winans ·
             Tank · Flavour · Fantasia · J. Ivy ·
             Daniel Caesar · Tyla · H.E.R. ·
-            Lauryn Hill &amp; The Fugees · T.I. · Naomi Raine
+            Lauryn Hill &amp; The Fugees · T.I. ·
+            Naomi Raine · Mickey Guyton ·
+            Toni Braxton · Jessie Reyez · Sara Bareilles
           </p>
         </div>
 
         <div class="credit-block">
           <h3>Television &amp; Awards</h3>
           <p>
-            The GRAMMY Awards · American Music Awards ·
-            BET Awards · Soul Train Awards · American Idol ·
+            The GRAMMY Awards ·
+            American Music Awards (AMAs) ·
+            MTV Video Music Awards (VMAs) ·
+            Academy of Country Music (ACM) Awards ·
+            Country Music Association (CMA) Awards ·
+            BET Awards · Soul Train Awards ·
+            American Idol ·
             The Tonight Show Starring Jimmy Fallon ·
             Jimmy Kimmel Live! ·
             The Late Show with Stephen Colbert
@@ -833,8 +826,9 @@ footer {
           <h3>Live Performance</h3>
           <p>
             Mary J. Blige · Rihanna · Beyoncé ·
-            Kenny Rogers (CMA) · P!nk · Kacey Musgraves ·
-            Dan + Shay · Lizzo · Jay-Z · Natalie Grant
+            Kenny Rogers (CMA) · P!nk ·
+            Kacey Musgraves · Dan + Shay ·
+            Lizzo · JAY-Z · Natalie Grant · Mickey Guyton
           </p>
         </div>
 
@@ -846,6 +840,45 @@ footer {
           </p>
         </div>
       </div>
+    </div>
+
+    <div class="highlight-credits">
+      <h3>Additional Selected Performance &amp; Arranging Credits</h3>
+
+      <p>
+        <strong>Mickey Guyton — ACM Awards (2021):</strong>
+        Viola performance.
+      </p>
+
+      <p>
+        <strong>CMA Awards:</strong>
+        Viola performance.
+      </p>
+
+      <p>
+        <strong>Lizzo — GRAMMY Awards (2020):</strong>
+        Viola performance.
+      </p>
+
+      <p>
+        <strong>Toni Braxton — AMAs (2019):</strong>
+        String arranger.
+      </p>
+
+      <p>
+        <strong>Jessie Reyez (2022):</strong>
+        Arranger &amp; orchestrator.
+      </p>
+
+      <p>
+        <strong>Sara Bareilles — American Idol (2022):</strong>
+        String arranger.
+      </p>
+
+      <p>
+        <strong>Mariah Carey — MTV VMAs (2025):</strong>
+        String orchestrator &amp; musician contractor.
+      </p>
     </div>
   </div>
 </section>
@@ -886,10 +919,10 @@ footer {
           full-orchestra arrangement that explores the work
           through a fresh harmonic and expressive perspective.
           Through thoughtful chord substitutions, expanded
-          orchestral textures, and a deliberate departure from
-          a traditionally patriotic interpretation, she created
-          a more nuanced and contemporary musical experience
-          while honoring the work's historical roots.
+          orchestral textures, and a deliberate departure
+          from a traditionally patriotic interpretation,
+          she created a nuanced and contemporary musical
+          experience while honoring the work's historical roots.
         </p>
 
         <div class="commission-role">
@@ -900,17 +933,12 @@ footer {
           Watch: Young Warrior — Nashville Symphony Orchestra
         </span>
 
-        <video
-          class="commission-video"
-          controls
-          playsinline
-          preload="metadata"
-          aria-label="Young Warrior performance video"
-        >
+        <video class="commission-video"
+               controls playsinline preload="metadata"
+               aria-label="Young Warrior performance video">
           <source
             src="Young_Warrior_Nashville_Symphony_Web.mp4"
-            type="video/mp4"
-          >
+            type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
 
@@ -932,14 +960,15 @@ footer {
 
         <p>
           Commissioned by Atlanta Music Project,
-          <em>Cape Verdean Suite</em> is an original orchestral
-          work celebrating the rich musical heritage of
-          Cape Verde. Drawing upon the islands' distinctive
-          musical traditions, rhythms, and melodic expressions,
-          Nicole composed and arranged the suite for full
-          orchestra, weaving cultural influences into a
-          vibrant symphonic narrative that honors Cape Verdean
-          identity and musical storytelling.
+          <em>Cape Verdean Suite</em> is an original
+          orchestral work celebrating the rich musical
+          heritage of Cape Verde. Drawing upon the islands'
+          distinctive musical traditions, rhythms, and
+          melodic expressions, Nicole composed and
+          arranged the suite for full orchestra, weaving
+          cultural influences into a vibrant symphonic
+          narrative that honors Cape Verdean identity
+          and musical storytelling.
         </p>
 
         <div class="commission-role">
@@ -950,17 +979,12 @@ footer {
           Watch: Cape Verdean Suite — Atlanta Music Project
         </span>
 
-        <video
-          class="commission-video"
-          controls
-          playsinline
-          preload="metadata"
-          aria-label="Cape Verdean Suite performance video"
-        >
+        <video class="commission-video"
+               controls playsinline preload="metadata"
+               aria-label="Cape Verdean Suite performance video">
           <source
             src="Cape_Verdean_Suite_AMP_Web.mp4"
-            type="video/mp4"
-          >
+            type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
 
@@ -996,12 +1020,9 @@ footer {
           Arranger &amp; Orchestrator · Full Orchestra
         </div>
 
-        <a
-          class="commission-watch"
-          href="https://www.facebook.com/share/v/1FnktcXPxr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="commission-watch"
+           href="https://www.facebook.com/share/v/1FnktcXPxr/"
+           target="_blank" rel="noopener noreferrer">
           Watch Flavour: Orchestrated ↗
         </a>
 
@@ -1009,6 +1030,7 @@ footer {
           Opens the performance video on Facebook.
         </span>
       </article>
+
     </div>
   </div>
 </section>
@@ -1021,20 +1043,20 @@ footer {
     <h2>Live performance.</h2>
 
     <p class="muted">
-      Behind the scenes, moments before the music reaches the audience.
+      Behind the scenes, moments before the music
+      reaches the audience.
     </p>
 
     <div class="performance-grid">
       <img
         loading="lazy"
         src="nicole-performance-1.jpg"
-        alt="Nicole Hardin backstage overlooking a large outdoor concert audience"
-      >
+        alt="Nicole Hardin backstage overlooking an outdoor concert audience">
+
       <img
         loading="lazy"
         src="nicole-performance-2.jpg"
-        alt="Nicole Hardin preparing backstage at an outdoor concert"
-      >
+        alt="Nicole Hardin preparing backstage at an outdoor concert">
     </div>
   </div>
 </section>
@@ -1048,204 +1070,300 @@ footer {
 
     <div class="photo-grid">
       <figure>
-        <img loading="lazy" src="nicole-portrait-violin.jpg" alt="Nicole Hardin standing with violin">
+        <img loading="lazy"
+             src="nicole-portrait-violin.jpg"
+             alt="Nicole Hardin standing with violin">
         <figcaption>Portrait with violin</figcaption>
       </figure>
+
       <figure>
-        <img loading="lazy" src="nicole-blue-portrait.jpg" alt="Nicole Hardin portrait against blue background">
+        <img loading="lazy"
+             src="nicole-blue-portrait.jpg"
+             alt="Nicole Hardin portrait against a blue background">
         <figcaption>Artist portrait</figcaption>
       </figure>
+
       <figure>
-        <img loading="lazy" src="nicole-conducting.jpg" alt="Nicole Hardin with violin and bow in black-and-white portrait">
+        <img loading="lazy"
+             src="nicole-conducting.jpg"
+             alt="Nicole Hardin in a black-and-white portrait with violin">
         <figcaption>Musician and conductor</figcaption>
       </figure>
+
       <figure>
-        <img loading="lazy" src="nicole-city-portrait.jpg" alt="Nicole Hardin photographed against a city skyline">
+        <img loading="lazy"
+             src="nicole-city-portrait.jpg"
+             alt="Nicole Hardin photographed against a city skyline">
         <figcaption>Artist portrait</figcaption>
       </figure>
+
       <figure>
-        <img loading="lazy" src="nicole-artistic-portrait.jpg" alt="Creative double exposure portrait of Nicole Hardin">
+        <img loading="lazy"
+             src="nicole-artistic-portrait.jpg"
+             alt="Creative double-exposure portrait of Nicole Hardin">
         <figcaption>Creative portrait</figcaption>
       </figure>
+
       <figure>
-        <img loading="lazy" src="nicole-black-white.jpg" alt="Black and white full-length portrait of Nicole Hardin with violin">
+        <img loading="lazy"
+             src="nicole-black-white.jpg"
+             alt="Black-and-white portrait of Nicole Hardin with violin">
         <figcaption>Black-and-white portrait</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- WATCH & LISTEN -->
+<!-- WATCH AND LISTEN -->
 
 <section id="gallery">
   <div class="wrap">
+
     <div class="eyebrow">
       Selected Performances &amp; Creative Credits
     </div>
+
     <h2>Watch &amp; Listen.</h2>
 
     <p class="muted">
-      A selection of performances, productions,
-      arrangements, orchestrations, and musical collaborations.
+      A selection of performances, productions, arrangements,
+      orchestrations, and musical collaborations.
       Explore each project to experience the work.
     </p>
 
     <div class="gallery">
 
+      <!-- 1. TYLA -->
       <a href="https://www.instagram.com/p/DHO5Qihuu2l/"
          target="_blank" rel="noopener noreferrer">
-        <small>2025 · Artist Collaboration</small>
-        <strong>Tyla × Mercedes-Benz</strong>
-        <span class="media-role">String Arranger &amp; Producer</span>
-        <span class="media-description">
-          Created and produced the string arrangement
-          for Tyla's Mercedes-Benz collaboration.
-        </span>
-        <span class="media-open">View Project ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="01-tyla-mercedes.jpg"
+             alt="Tyla and Mercedes-Benz project thumbnail">
+        <div class="gallery-copy">
+          <small>2025 · Artist Collaboration</small>
+          <strong>Tyla × Mercedes-Benz</strong>
+          <span class="media-role">
+            String Arranger &amp; Producer
+          </span>
+          <span class="media-description">
+            Created and produced the string arrangement
+            for Tyla's Mercedes-Benz collaboration.
+          </span>
+          <span class="media-open">View Project ↗</span>
+        </div>
       </a>
 
+      <!-- 2. GRAMMY TRIBUTE -->
       <a href="https://www.instagram.com/reel/DURB1TZAR7c/"
          target="_blank" rel="noopener noreferrer">
-        <small>2026 · GRAMMY Awards</small>
-        <strong>D'Angelo &amp; Roberta Flack Tribute</strong>
-        <span class="media-role">
-          String &amp; Harp Arranger, Producer &amp; Performer
-        </span>
-        <span class="media-description">
-          Arranged, produced, and performed string and harp
-          parts for the tribute featuring Ms. Lauryn Hill
-          and other celebrated artists.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="02-grammy-tribute.jpg"
+             alt="D'Angelo and Roberta Flack tribute project thumbnail">
+        <div class="gallery-copy">
+          <small>2026 · GRAMMY Awards</small>
+          <strong>D'Angelo &amp; Roberta Flack Tribute</strong>
+          <span class="media-role">
+            String &amp; Harp Arranger, Producer &amp; Performer
+          </span>
+          <span class="media-description">
+            Arranged, produced, and performed string and
+            harp parts for the tribute featuring Ms. Lauryn Hill.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 3. JAY-Z LOS ANGELES -->
       <a href="https://www.instagram.com/reel/De8SK8uClAs/"
          target="_blank" rel="noopener noreferrer">
-        <small>2026 · Live Performance</small>
-        <strong>JAY-Z — 30 Tour, Los Angeles</strong>
-        <span class="media-role">Violist</span>
-        <span class="media-description">
-          Viola performance for JAY-Z's
-          Los Angeles tour engagement.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="03-jayz-los-angeles.jpg"
+             alt="JAY-Z Los Angeles live performance thumbnail">
+        <div class="gallery-copy">
+          <small>2026 · Live Performance</small>
+          <strong>JAY-Z — 30 Tour, Los Angeles</strong>
+          <span class="media-role">Violist</span>
+          <span class="media-description">
+            Performed viola for JAY-Z's
+            Los Angeles tour engagement.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 4. JOHN LEGEND -->
       <a href="https://www.instagram.com/reel/CiSkwbrogNa/"
          target="_blank" rel="noopener noreferrer">
-        <small>Recording Project</small>
-        <strong>John Legend — LEGEND</strong>
-        <span class="media-role">String Arranger</span>
-        <span class="media-description">
-          Created string arrangements for three songs
-          on John Legend's LEGEND project.
-        </span>
-        <span class="media-open">Explore Project ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="04-john-legend.jpg"
+             alt="John Legend LEGEND album project thumbnail">
+        <div class="gallery-copy">
+          <small>Recording Project</small>
+          <strong>John Legend — LEGEND</strong>
+          <span class="media-role">String Arranger</span>
+          <span class="media-description">
+            Created string arrangements for three songs
+            on John Legend's LEGEND project.
+          </span>
+          <span class="media-open">Explore Project ↗</span>
+        </div>
       </a>
 
+      <!-- 5. BEYONCÉ -->
       <a href="https://www.instagram.com/tv/CboMEU9I85J/"
          target="_blank" rel="noopener noreferrer">
-        <small>2022 · Academy Awards</small>
-        <strong>Beyoncé — “Be Alive”</strong>
-        <span class="media-role">Violist</span>
-        <span class="media-description">
-          Viola performance for Beyoncé's presentation
-          of “Be Alive” at the 94th Academy Awards.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="05-beyonce-oscars.jpg"
+             alt="Beyoncé Be Alive Oscars artwork">
+        <div class="gallery-copy">
+          <small>2022 · Academy Awards</small>
+          <strong>Beyoncé — “Be Alive”</strong>
+          <span class="media-role">Violist</span>
+          <span class="media-description">
+            Performed viola for Beyoncé's presentation
+            of “Be Alive” at the 94th Academy Awards.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 6. AMERICAN IDOL -->
       <a href="https://www.instagram.com/tv/CdCa7_DoPsN/"
          target="_blank" rel="noopener noreferrer">
-        <small>American Idol · Season 15</small>
-        <strong>Disney's Tangled — “I See the Light”</strong>
-        <span class="media-role">String Arranger</span>
-        <span class="media-description">
-          Created the string arrangement for
-          “I See the Light” from Disney's Tangled
-          for an American Idol performance.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="06-american-idol.jpg"
+             alt="American Idol performance thumbnail">
+        <div class="gallery-copy">
+          <small>American Idol · Season 15</small>
+          <strong>Disney's Tangled — “I See the Light”</strong>
+          <span class="media-role">String Arranger</span>
+          <span class="media-description">
+            Created the string arrangement for
+            “I See the Light” from Disney's Tangled
+            for an American Idol performance.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 7. JAY-Z METROPOLITAN OPERA -->
       <a href="https://www.facebook.com/share/r/1NS2HVTEhx/"
          target="_blank" rel="noopener noreferrer">
-        <small>2026 · Special Event</small>
-        <strong>JAY-Z — HBO Documentary Premiere</strong>
-        <span class="media-role">Violist</span>
-        <span class="media-description">
-          Performed viola at the Metropolitan Opera House
-          in New York City for the documentary premiere.
-        </span>
-        <span class="media-open">View Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="07-jayz-met-opera-hbo.jpg"
+             alt="JAY-Z Metropolitan Opera House performance thumbnail">
+        <div class="gallery-copy">
+          <small>2026 · Special Event</small>
+          <strong>JAY-Z — HBO Documentary Premiere</strong>
+          <span class="media-role">Violist</span>
+          <span class="media-description">
+            Performed viola at the Metropolitan Opera House
+            in New York City for the documentary premiere.
+          </span>
+          <span class="media-open">View Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 8. FLAVOUR -->
       <a href="https://www.facebook.com/share/v/1FnktcXPxr/"
          target="_blank" rel="noopener noreferrer">
-        <small>2026 · Orchestral Production</small>
-        <strong>Flavour: Orchestrated</strong>
-        <span class="media-role">Full Orchestral Arranger</span>
-        <span class="media-description">
-          Created full-orchestra arrangements,
-          translating Flavour's music into a
-          symphonic performance setting.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="08-flavour-orchestrated.jpg"
+             alt="Flavour Orchestrated performance thumbnail">
+        <div class="gallery-copy">
+          <small>2026 · Orchestral Production</small>
+          <strong>Flavour: Orchestrated</strong>
+          <span class="media-role">
+            Full Orchestral Arranger &amp; Orchestrator
+          </span>
+          <span class="media-description">
+            Created full-orchestra arrangements,
+            translating Flavour's music into a
+            symphonic performance setting.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 9. MARIAH CAREY -->
       <a href="https://www.facebook.com/share/v/19oXeUYtwG/"
          target="_blank" rel="noopener noreferrer">
-        <small>2025 · MTV Video Music Awards</small>
-        <strong>Mariah Carey — VMAs Performance</strong>
-        <span class="media-role">
-          String Orchestrator &amp; Musician Contractor
-        </span>
-        <span class="media-description">
-          Orchestrated the string arrangements and
-          contracted the string musicians for
-          Mariah Carey's VMAs performance.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="09-mariah-carey-vmas.jpg"
+             alt="Mariah Carey MTV Video Music Awards thumbnail">
+        <div class="gallery-copy">
+          <small>2025 · MTV Video Music Awards</small>
+          <strong>Mariah Carey — VMAs Performance</strong>
+          <span class="media-role">
+            String Orchestrator &amp; Musician Contractor
+          </span>
+          <span class="media-description">
+            Orchestrated strings and contracted the
+            string musicians for Mariah Carey's
+            2025 MTV VMAs performance.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 10. DANIEL CAESAR -->
       <a href="https://www.facebook.com/share/v/1DSutTJDTM/"
          target="_blank" rel="noopener noreferrer">
-        <small>2023 · Late Show with Stephen Colbert</small>
-        <strong>Daniel Caesar — “Always”</strong>
-        <span class="media-role">String Arranger &amp; Producer</span>
-        <span class="media-description">
-          Arranged and produced the strings for
-          Daniel Caesar's televised performance of
-          “Always.”
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="10-daniel-caesar.jpg"
+             alt="Daniel Caesar Always performance thumbnail">
+        <div class="gallery-copy">
+          <small>2023 · The Late Show with Stephen Colbert</small>
+          <strong>Daniel Caesar — “Always”</strong>
+          <span class="media-role">
+            String Arranger &amp; Producer
+          </span>
+          <span class="media-description">
+            Arranged and produced the strings for
+            Daniel Caesar's televised performance
+            of “Always.”
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 11. BECKY G -->
       <a href="https://www.facebook.com/share/r/19DzVFBjdp/"
          target="_blank" rel="noopener noreferrer">
-        <small>2023 · NPR Tiny Desk</small>
-        <strong>Becky G — Tiny Desk Concert</strong>
-        <span class="media-role">String Arranger</span>
-        <span class="media-description">
-          Created the string arrangements for
-          Becky G's NPR Tiny Desk Concert.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="11-becky-g-tiny-desk.jpg"
+             alt="Becky G NPR Tiny Desk Concert thumbnail">
+        <div class="gallery-copy">
+          <small>2023 · NPR Tiny Desk</small>
+          <strong>Becky G — Tiny Desk Concert</strong>
+          <span class="media-role">String Arranger</span>
+          <span class="media-description">
+            Created string arrangements for
+            Becky G's NPR Tiny Desk Concert.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
+      <!-- 12. MS. LAURYN HILL AND THE FUGEES -->
       <a href="https://www.facebook.com/share/v/1CFseBzRus/"
          target="_blank" rel="noopener noreferrer">
-        <small>2023 · Global Citizen Festival</small>
-        <strong>Ms. Lauryn Hill &amp; The Fugees</strong>
-        <span class="media-role">
-          String Arranger, Musician Contractor &amp; Conductor
-        </span>
-        <span class="media-description">
-          Arranged, contracted, and conducted the
-          strings for the Global Citizen Festival
-          performance in Central Park, New York City.
-        </span>
-        <span class="media-open">Watch Performance ↗</span>
+        <img loading="lazy" width="1200" height="675"
+             src="12-lauryn-hill-global-citizen.jpg"
+             alt="Ms. Lauryn Hill and The Fugees Global Citizen Festival thumbnail">
+        <div class="gallery-copy">
+          <small>2023 · Global Citizen Festival</small>
+          <strong>Ms. Lauryn Hill &amp; The Fugees</strong>
+          <span class="media-role">
+            String Arranger, Musician Contractor &amp; Conductor
+          </span>
+          <span class="media-description">
+            Arranged, contracted, and conducted
+            strings for the Global Citizen Festival
+            performance in Central Park, New York City.
+          </span>
+          <span class="media-open">Watch Performance ↗</span>
+        </div>
       </a>
 
     </div>
@@ -1256,10 +1374,8 @@ footer {
 
 <section id="testimonials">
   <div class="wrap">
-    <div class="eyebrow">
-      Client Experiences
-    </div>
 
+    <div class="eyebrow">Client Experiences</div>
     <h2>In Their Words.</h2>
 
     <p class="testimonial-intro">
@@ -1289,8 +1405,8 @@ footer {
           creative, innovative, and versatile musician
           with a distinct, soulful sound. When you hear
           her work, you know it’s her. That kind of
-          musical identity is rare, and it’s one of
-          the many things that makes her stand out.
+          musical identity is rare, and it’s one of the
+          many things that makes her stand out.
           Working with her has been a joy, and I
           wholeheartedly recommend her to anyone
           looking for exceptional musicianship,
@@ -1346,13 +1462,14 @@ footer {
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="eyebrow">Let's Collaborate</div>
+
     <h2>Let's make something extraordinary.</h2>
 
     <p>
-      For production, recording, performance, touring,
-      orchestration, composition, arranging, conducting,
-      education, consulting, commissions, and
-      musician contracting inquiries.
+      For production, recording, performance,
+      touring, orchestration, composition, arranging,
+      conducting, education, consulting, commissions,
+      and musician contracting inquiries.
     </p>
 
     <p>
@@ -1361,12 +1478,9 @@ footer {
     </p>
 
     <div id="booking">
-      <a
-        class="booking-button"
-        href="https://go.forms.app/form/6ae4c6e20d190bfbb94704fc"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="booking-button"
+         href="https://go.forms.app/form/6ae4c6e20d190bfbb94704fc"
+         target="_blank" rel="noopener noreferrer">
         Submit a Booking &amp; Project Inquiry
       </a>
     </div>
@@ -1379,23 +1493,17 @@ footer {
     </p>
 
     <div class="social">
-      <a
-        href="https://linktr.ee/Stringschick"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Linktree</a>
+      <a href="https://linktr.ee/Stringschick"
+         target="_blank"
+         rel="noopener noreferrer">Linktree</a>
 
-      <a
-        href="https://www.instagram.com/stringschick/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Instagram</a>
+      <a href="https://www.instagram.com/stringschick/"
+         target="_blank"
+         rel="noopener noreferrer">Instagram</a>
 
-      <a
-        href="https://www.facebook.com/share/1dvphjsjcH/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Facebook</a>
+      <a href="https://www.facebook.com/share/1dvphjsjcH/"
+         target="_blank"
+         rel="noopener noreferrer">Facebook</a>
     </div>
   </div>
 </section>
