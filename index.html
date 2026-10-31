@@ -24,28 +24,15 @@
   --line:#45566a;
 }
 
-* {
-  box-sizing:border-box;
-}
+* { box-sizing:border-box; }
 
-html {
-  scroll-behavior:smooth;
-}
+html { scroll-behavior:smooth; }
 
 body {
   margin:0;
   background:
-    radial-gradient(
-      ellipse at 88% 8%,
-      #203c5b 0%,
-      transparent 32%
-    ),
-    linear-gradient(
-      130deg,
-      #0c1725,
-      #15273c 55%,
-      #0e1b2b
-    );
+    radial-gradient(ellipse at 88% 8%,#203c5b 0%,transparent 32%),
+    linear-gradient(130deg,#0c1725,#15273c 55%,#0e1b2b);
   background-attachment:fixed;
   color:var(--ink);
   font-family:Arial,Helvetica,sans-serif;
@@ -53,16 +40,14 @@ body {
   overflow-x:hidden;
 }
 
-a {
-  color:inherit;
-}
+a { color:inherit; }
 
 .wrap {
   width:min(1140px,calc(100% - 48px));
   margin:auto;
 }
 
-/* HEADER */
+/* NAVIGATION */
 
 header {
   border-bottom:1px solid var(--line);
@@ -244,26 +229,20 @@ section:nth-of-type(even) {
   padding-top:18px;
 }
 
-.service h3 {
-  font-size:23px;
-}
+.service h3 { font-size:23px; }
 
-.service p {
-  color:var(--muted);
-}
+.service p { color:var(--muted); }
 
 /* CREDITS */
 
-.credit-block {
-  margin:28px 0;
-}
+.credit-block { margin:28px 0; }
 
 .credit-block h3 {
   font-size:23px;
   color:var(--accent);
 }
 
-/* ORIGINAL WORKS AND COMMISSIONS */
+/* COMMISSIONS */
 
 .commission-grid {
   display:grid;
@@ -280,7 +259,7 @@ section:nth-of-type(even) {
   min-width:0;
 }
 
-.commission .commission-meta {
+.commission-meta {
   color:var(--accent);
   font-size:11px;
   text-transform:uppercase;
@@ -292,7 +271,7 @@ section:nth-of-type(even) {
   margin:16px 0;
 }
 
-.commission .commission-byline {
+.commission-byline {
   font-weight:bold;
   font-size:13px;
   color:var(--ink);
@@ -303,7 +282,7 @@ section:nth-of-type(even) {
   font-size:14px;
 }
 
-.commission .commission-role {
+.commission-role {
   border-top:1px solid var(--line);
   margin-top:22px;
   padding-top:14px;
@@ -356,7 +335,7 @@ section:nth-of-type(even) {
   color:var(--accent);
 }
 
-/* PHOTO GALLERY */
+/* PHOTOGRAPHS */
 
 .photo-grid {
   display:grid;
@@ -364,9 +343,7 @@ section:nth-of-type(even) {
   gap:14px;
 }
 
-.photo-grid figure {
-  margin:0;
-}
+.photo-grid figure { margin:0; }
 
 .photo-grid img {
   width:100%;
@@ -379,8 +356,6 @@ section:nth-of-type(even) {
   color:var(--muted);
   padding:7px 0;
 }
-
-/* PERFORMANCE */
 
 .performance-grid {
   display:grid;
@@ -395,7 +370,7 @@ section:nth-of-type(even) {
   object-fit:cover;
 }
 
-/* SELECTED MEDIA */
+/* WATCH AND LISTEN */
 
 .gallery {
   display:grid;
@@ -460,6 +435,72 @@ section:nth-of-type(even) {
   margin-top:auto;
 }
 
+/* TESTIMONIALS */
+
+.testimonial-intro {
+  max-width:760px;
+  color:var(--muted);
+}
+
+.testimonial-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin-top:35px;
+}
+
+.testimonial-card {
+  display:flex;
+  flex-direction:column;
+  padding:36px;
+  background:rgba(27,43,64,.88);
+  border:1px solid var(--line);
+  border-top:2px solid var(--accent);
+}
+
+.testimonial-category {
+  font-size:11px;
+  color:var(--accent);
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.testimonial-quote-mark {
+  font-family:Georgia,serif;
+  font-size:70px;
+  line-height:1;
+  color:var(--accent);
+  margin:18px 0 0;
+}
+
+.testimonial-quote {
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:19px;
+  font-style:italic;
+  color:var(--ink);
+  line-height:1.65;
+  margin:0 0 28px;
+}
+
+.testimonial-author {
+  margin-top:auto;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+}
+
+.testimonial-author strong {
+  display:block;
+  font-size:15px;
+  color:var(--accent);
+}
+
+.testimonial-author span {
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-top:4px;
+}
+
 /* CONTACT */
 
 .contact a,
@@ -467,13 +508,9 @@ section:nth-of-type(even) {
   color:var(--accent);
 }
 
-.contact .booking-button {
-  color:var(--bg);
-}
+.contact .booking-button { color:var(--bg); }
 
-.contact .booking-button:hover {
-  color:var(--accent);
-}
+.contact .booking-button:hover { color:var(--accent); }
 
 .social {
   display:flex;
@@ -499,14 +536,9 @@ footer {
 /* TABLET */
 
 @media(max-width:800px) {
-  .hero,
-  .two {
-    grid-template-columns:1fr;
-  }
+  .hero,.two { grid-template-columns:1fr; }
 
-  .hero {
-    padding:55px 0;
-  }
+  .hero { padding:55px 0; }
 
   .hero img {
     height:auto;
@@ -514,13 +546,11 @@ footer {
     object-fit:contain;
   }
 
-  .service-grid,
-  .photo-grid,
-  .gallery {
+  .service-grid,.photo-grid,.gallery {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 
-  .commission-grid {
+  .commission-grid,.testimonial-grid {
     grid-template-columns:1fr;
   }
 }
@@ -528,76 +558,51 @@ footer {
 /* PHONE */
 
 @media(max-width:520px) {
-  .wrap {
-    width:calc(100% - 34px);
-  }
+  .wrap { width:calc(100% - 34px); }
 
   .navlinks {
     gap:11px;
     justify-content:center;
   }
 
-  .navlinks a {
-    font-size:10px;
-  }
+  .navlinks a { font-size:10px; }
 
-  h1 {
-    font-size:clamp(52px,15vw,75px);
-  }
+  h1 { font-size:clamp(52px,15vw,75px); }
 
-  section {
-    padding:60px 0;
-  }
+  section { padding:60px 0; }
 
-  .service-grid,
-  .gallery,
-  .photo-grid {
+  .service-grid,.gallery,.photo-grid {
     grid-template-columns:1fr;
   }
 
-  .performance-grid {
-    grid-template-columns:1fr;
-  }
+  .performance-grid { grid-template-columns:1fr; }
 
   .photo-grid img {
     height:auto;
     max-height:520px;
   }
 
-  .panel {
-    padding:24px;
-  }
+  .panel,.testimonial-card { padding:24px; }
+
+  .testimonial-quote { font-size:17px; }
 
   .booking-button {
     text-align:center;
     max-width:100%;
   }
 
-  .gallery a {
-    min-height:185px;
-  }
+  .gallery a { min-height:185px; }
 }
 
 @media(prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior:auto;
-  }
-
-  .booking-button,
-  .gallery a {
-    transition:none;
-  }
-
-  .gallery a:hover {
-    transform:none;
-  }
+  html { scroll-behavior:auto; }
+  .booking-button,.gallery a { transition:none; }
+  .gallery a:hover { transform:none; }
 }
 </style>
 </head>
 
 <body>
-
-<!-- CENTERED NAVIGATION -->
 
 <header>
   <div class="wrap">
@@ -610,6 +615,7 @@ footer {
         <a href="#performance">Performance</a>
         <a href="#photos">Photos</a>
         <a href="#gallery">Media</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
         <a href="#booking">Booking</a>
       </div>
@@ -724,7 +730,6 @@ footer {
     <h2>From imagination to performance.</h2>
 
     <div class="service-grid">
-
       <div class="service">
         <h3>Music Production</h3>
         <p>Creative music production and collaboration with artists, composers, musicians, and production teams from concept to completion.</p>
@@ -769,7 +774,6 @@ footer {
         <h3>Musician Contracting</h3>
         <p>Professional musician selection, ensemble assembly, personnel coordination, and session planning for recording and live performance.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -783,7 +787,6 @@ footer {
 
     <div class="two">
       <div>
-
         <div class="credit-block">
           <h3>Artist Collaborations</h3>
           <p>
@@ -814,11 +817,9 @@ footer {
             Nashville Symphony · Atlanta Opera
           </p>
         </div>
-
       </div>
 
       <div>
-
         <div class="credit-block">
           <h3>Additional Selected Projects</h3>
           <p>
@@ -844,17 +845,15 @@ footer {
             2023–2025.
           </p>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
-<!-- ORIGINAL WORKS & COMMISSIONS -->
+<!-- COMMISSIONS -->
 
 <section id="commissions">
   <div class="wrap">
-
     <div class="eyebrow">
       Selected Original Works &amp; Commissions
     </div>
@@ -868,8 +867,6 @@ footer {
     </p>
 
     <div class="commission-grid">
-
-      <!-- YOUNG WARRIOR -->
 
       <article class="commission">
         <div class="commission-meta">
@@ -922,8 +919,6 @@ footer {
         </span>
       </article>
 
-      <!-- CAPE VERDEAN SUITE -->
-
       <article class="commission">
         <div class="commission-meta">
           2026 · Atlanta Music Project
@@ -974,8 +969,6 @@ footer {
         </span>
       </article>
 
-      <!-- FLAVOUR ORCHESTRATED -->
-
       <article class="commission">
         <div class="commission-meta">
           2026 · Live Recording &amp; Video Production
@@ -1016,7 +1009,6 @@ footer {
           Opens the performance video on Facebook.
         </span>
       </article>
-
     </div>
   </div>
 </section>
@@ -1038,7 +1030,6 @@ footer {
         src="nicole-performance-1.jpg"
         alt="Nicole Hardin backstage overlooking a large outdoor concert audience"
       >
-
       <img
         loading="lazy"
         src="nicole-performance-2.jpg"
@@ -1048,7 +1039,7 @@ footer {
   </div>
 </section>
 
-<!-- PHOTO GALLERY -->
+<!-- ARTIST PORTRAITS -->
 
 <section id="photos">
   <div class="wrap">
@@ -1056,46 +1047,41 @@ footer {
     <h2>Behind the artistry.</h2>
 
     <div class="photo-grid">
-
       <figure>
         <img loading="lazy" src="nicole-portrait-violin.jpg" alt="Nicole Hardin standing with violin">
         <figcaption>Portrait with violin</figcaption>
       </figure>
-
       <figure>
         <img loading="lazy" src="nicole-blue-portrait.jpg" alt="Nicole Hardin portrait against blue background">
         <figcaption>Artist portrait</figcaption>
       </figure>
-
       <figure>
         <img loading="lazy" src="nicole-conducting.jpg" alt="Nicole Hardin with violin and bow in black-and-white portrait">
         <figcaption>Musician and conductor</figcaption>
       </figure>
-
       <figure>
         <img loading="lazy" src="nicole-city-portrait.jpg" alt="Nicole Hardin photographed against a city skyline">
         <figcaption>Artist portrait</figcaption>
       </figure>
-
       <figure>
         <img loading="lazy" src="nicole-artistic-portrait.jpg" alt="Creative double exposure portrait of Nicole Hardin">
         <figcaption>Creative portrait</figcaption>
       </figure>
-
       <figure>
         <img loading="lazy" src="nicole-black-white.jpg" alt="Black and white full-length portrait of Nicole Hardin with violin">
         <figcaption>Black-and-white portrait</figcaption>
       </figure>
-
     </div>
   </div>
 </section>
 
-<!-- FEATURED MEDIA -->
+<!-- WATCH & LISTEN -->
 
 <section id="gallery">
   <div class="wrap">
-    <div class="eyebrow">Selected Performances &amp; Creative Credits</div>
+    <div class="eyebrow">
+      Selected Performances &amp; Creative Credits
+    </div>
     <h2>Watch &amp; Listen.</h2>
 
     <p class="muted">
@@ -1106,13 +1092,8 @@ footer {
 
     <div class="gallery">
 
-      <!-- 01 TYLA -->
-
-      <a
-        href="https://www.instagram.com/p/DHO5Qihuu2l/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.instagram.com/p/DHO5Qihuu2l/"
+         target="_blank" rel="noopener noreferrer">
         <small>2025 · Artist Collaboration</small>
         <strong>Tyla × Mercedes-Benz</strong>
         <span class="media-role">String Arranger &amp; Producer</span>
@@ -1123,13 +1104,8 @@ footer {
         <span class="media-open">View Project ↗</span>
       </a>
 
-      <!-- 02 GRAMMYS -->
-
-      <a
-        href="https://www.instagram.com/reel/DURB1TZAR7c/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.instagram.com/reel/DURB1TZAR7c/"
+         target="_blank" rel="noopener noreferrer">
         <small>2026 · GRAMMY Awards</small>
         <strong>D'Angelo &amp; Roberta Flack Tribute</strong>
         <span class="media-role">
@@ -1143,13 +1119,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 03 JAY-Z TOUR -->
-
-      <a
-        href="https://www.instagram.com/reel/De8SK8uClAs/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.instagram.com/reel/De8SK8uClAs/"
+         target="_blank" rel="noopener noreferrer">
         <small>2026 · Live Performance</small>
         <strong>JAY-Z — 30 Tour, Los Angeles</strong>
         <span class="media-role">Violist</span>
@@ -1160,13 +1131,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 04 JOHN LEGEND -->
-
-      <a
-        href="https://www.instagram.com/reel/CiSkwbrogNa/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.instagram.com/reel/CiSkwbrogNa/"
+         target="_blank" rel="noopener noreferrer">
         <small>Recording Project</small>
         <strong>John Legend — LEGEND</strong>
         <span class="media-role">String Arranger</span>
@@ -1177,13 +1143,8 @@ footer {
         <span class="media-open">Explore Project ↗</span>
       </a>
 
-      <!-- 05 BEYONCÉ OSCARS -->
-
-      <a
-        href="https://www.instagram.com/tv/CboMEU9I85J/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.instagram.com/tv/CboMEU9I85J/"
+         target="_blank" rel="noopener noreferrer">
         <small>2022 · Academy Awards</small>
         <strong>Beyoncé — “Be Alive”</strong>
         <span class="media-role">Violist</span>
@@ -1194,13 +1155,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 06 AMERICAN IDOL -->
-
-      <a
-        href="https://www.instagram.com/tv/CdCa7_DoPsN/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.instagram.com/tv/CdCa7_DoPsN/"
+         target="_blank" rel="noopener noreferrer">
         <small>American Idol · Season 15</small>
         <strong>Disney's Tangled — “I See the Light”</strong>
         <span class="media-role">String Arranger</span>
@@ -1212,13 +1168,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 07 JAY-Z DOCUMENTARY PREMIERE -->
-
-      <a
-        href="https://www.facebook.com/share/r/1NS2HVTEhx/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.facebook.com/share/r/1NS2HVTEhx/"
+         target="_blank" rel="noopener noreferrer">
         <small>2026 · Special Event</small>
         <strong>JAY-Z — HBO Documentary Premiere</strong>
         <span class="media-role">Violist</span>
@@ -1229,13 +1180,8 @@ footer {
         <span class="media-open">View Performance ↗</span>
       </a>
 
-      <!-- 08 FLAVOUR -->
-
-      <a
-        href="https://www.facebook.com/share/v/1FnktcXPxr/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.facebook.com/share/v/1FnktcXPxr/"
+         target="_blank" rel="noopener noreferrer">
         <small>2026 · Orchestral Production</small>
         <strong>Flavour: Orchestrated</strong>
         <span class="media-role">Full Orchestral Arranger</span>
@@ -1247,13 +1193,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 09 MARIAH CAREY -->
-
-      <a
-        href="https://www.facebook.com/share/v/19oXeUYtwG/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.facebook.com/share/v/19oXeUYtwG/"
+         target="_blank" rel="noopener noreferrer">
         <small>2025 · MTV Video Music Awards</small>
         <strong>Mariah Carey — VMAs Performance</strong>
         <span class="media-role">
@@ -1267,13 +1208,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 10 DANIEL CAESAR -->
-
-      <a
-        href="https://www.facebook.com/share/v/1DSutTJDTM/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.facebook.com/share/v/1DSutTJDTM/"
+         target="_blank" rel="noopener noreferrer">
         <small>2023 · Late Show with Stephen Colbert</small>
         <strong>Daniel Caesar — “Always”</strong>
         <span class="media-role">String Arranger &amp; Producer</span>
@@ -1285,13 +1221,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 11 BECKY G -->
-
-      <a
-        href="https://www.facebook.com/share/r/19DzVFBjdp/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.facebook.com/share/r/19DzVFBjdp/"
+         target="_blank" rel="noopener noreferrer">
         <small>2023 · NPR Tiny Desk</small>
         <strong>Becky G — Tiny Desk Concert</strong>
         <span class="media-role">String Arranger</span>
@@ -1302,13 +1233,8 @@ footer {
         <span class="media-open">Watch Performance ↗</span>
       </a>
 
-      <!-- 12 MS. LAURYN HILL & THE FUGEES -->
-
-      <a
-        href="https://www.facebook.com/share/v/1CFseBzRus/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.facebook.com/share/v/1CFseBzRus/"
+         target="_blank" rel="noopener noreferrer">
         <small>2023 · Global Citizen Festival</small>
         <strong>Ms. Lauryn Hill &amp; The Fugees</strong>
         <span class="media-role">
@@ -1326,7 +1252,96 @@ footer {
   </div>
 </section>
 
-<!-- CONTACT & BOOKING -->
+<!-- TESTIMONIALS -->
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="eyebrow">
+      Client Experiences
+    </div>
+
+    <h2>In Their Words.</h2>
+
+    <p class="testimonial-intro">
+      Great music is built through collaboration.
+      Hear from artists, producers, and educators
+      who have experienced Nicole's artistry,
+      musicianship, and commitment firsthand.
+    </p>
+
+    <div class="testimonial-grid">
+
+      <!-- LIO SAENZ -->
+
+      <article class="testimonial-card">
+        <div class="testimonial-category">
+          Arranging &amp; Production
+        </div>
+
+        <div class="testimonial-quote-mark"
+             aria-hidden="true">“</div>
+
+        <blockquote class="testimonial-quote">
+          Nicole is, in my opinion, one of the best
+          string arrangers in the world, and her
+          character and professionalism match her
+          extraordinary talent. She is an incredibly
+          creative, innovative, and versatile musician
+          with a distinct, soulful sound. When you hear
+          her work, you know it’s her. That kind of
+          musical identity is rare, and it’s one of
+          the many things that makes her stand out.
+          Working with her has been a joy, and I
+          wholeheartedly recommend her to anyone
+          looking for exceptional musicianship,
+          integrity, and a true creative partner.
+        </blockquote>
+
+        <div class="testimonial-author">
+          <strong>Lio Saenz</strong>
+          <span>Multi-instrumentalist &amp; Producer</span>
+        </div>
+      </article>
+
+      <!-- CORETTA PONDER -->
+
+      <article class="testimonial-card">
+        <div class="testimonial-category">
+          Music Education &amp; Mentorship
+        </div>
+
+        <div class="testimonial-quote-mark"
+             aria-hidden="true">“</div>
+
+        <blockquote class="testimonial-quote">
+          Working with Nicole has been an absolute
+          pleasure. She serves our nonprofit organization
+          with unwavering commitment and dedication.
+          She consistently goes above and beyond to
+          ensure that every student she works with
+          receives a personalized and meaningful
+          learning experience. Nicole is naturally
+          talented, humble, hardworking, and genuinely
+          passionate about making a difference.
+          Her dedication and willingness to go the extra
+          mile do not go unnoticed. We are incredibly
+          grateful to have her as part of our community
+          and are excited to continue working alongside her!
+        </blockquote>
+
+        <div class="testimonial-author">
+          <strong>Coretta Ponder</strong>
+          <span>
+            Director, DeKalb Christian Home Educators
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
   <div class="wrap">
