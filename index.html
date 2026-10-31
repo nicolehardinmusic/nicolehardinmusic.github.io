@@ -4,7 +4,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>Nicole Hardin | Musician, Producer, Composer &amp; Conductor</title>
 <meta name="description" content="Nicole Hardin — music producer, session musician, orchestrator, composer, arranger, conductor, educator and consultant.">
 <meta property="og:type" content="website">
@@ -191,9 +190,7 @@ section:nth-of-type(even) {
   border:1px solid var(--line);
 }
 
-.panel p,.muted {
-  color:var(--muted);
-}
+.panel p,.muted { color:var(--muted); }
 
 .about-img {
   width:100%;
@@ -345,11 +342,11 @@ section:nth-of-type(even) {
   object-fit:cover;
 }
 
-/* WATCH & LISTEN */
+/* WATCH & LISTEN — SMALLER SQUARE THUMBNAILS */
 
 .gallery {
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:18px;
   margin-top:28px;
 }
@@ -372,9 +369,13 @@ section:nth-of-type(even) {
 
 .gallery img {
   display:block;
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
+  width:min(100%,220px);
+  height:auto;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  object-position:center;
+  margin:16px auto 0;
+  padding:4px;
   background:#101b2b;
 }
 
@@ -515,16 +516,22 @@ footer {
 /* TABLET */
 
 @media(max-width:800px) {
-  .hero,.two { grid-template-columns:1fr; }
+  .hero,.two {
+    grid-template-columns:1fr;
+  }
+
   .hero { padding:55px 0; }
+
   .hero img {
     height:auto;
     max-height:620px;
     object-fit:contain;
   }
+
   .service-grid,.photo-grid,.gallery {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
+
   .commission-grid,.testimonial-grid {
     grid-template-columns:1fr;
   }
@@ -538,13 +545,16 @@ footer {
   .navlinks a { font-size:10px; }
   h1 { font-size:clamp(52px,15vw,75px); }
   section { padding:60px 0; }
+
   .service-grid,.gallery,.photo-grid,.performance-grid {
     grid-template-columns:1fr;
   }
+
   .photo-grid img {
     height:auto;
     max-height:520px;
   }
+
   .panel,.testimonial-card { padding:24px; }
   .testimonial-quote { font-size:17px; }
 }
@@ -783,7 +793,8 @@ footer {
             Daniel Caesar · Tyla · H.E.R. ·
             Lauryn Hill &amp; The Fugees · T.I. ·
             Naomi Raine · Mickey Guyton ·
-            Toni Braxton · Jessie Reyez · Sara Bareilles
+            Toni Braxton · Jessie Reyez · Sara Bareilles ·
+            Alicia Keys
           </p>
         </div>
 
@@ -876,6 +887,11 @@ footer {
       </p>
 
       <p>
+        <strong>Alicia Keys — AMAs (2021):</strong>
+        Orchestrator.
+      </p>
+
+      <p>
         <strong>Mariah Carey — MTV VMAs (2025):</strong>
         String orchestrator &amp; musician contractor.
       </p>
@@ -921,7 +937,7 @@ footer {
           Through thoughtful chord substitutions, expanded
           orchestral textures, and a deliberate departure
           from a traditionally patriotic interpretation,
-          she created a nuanced and contemporary musical
+          she created a more nuanced and contemporary musical
           experience while honoring the work's historical roots.
         </p>
 
@@ -1114,7 +1130,7 @@ footer {
   </div>
 </section>
 
-<!-- WATCH AND LISTEN -->
+<!-- WATCH & LISTEN -->
 
 <section id="gallery">
   <div class="wrap">
